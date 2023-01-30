@@ -1,0 +1,14 @@
+.container {
+	display: flex;
+	height: 200px;
+	outline: 1px solid black; /* for debugging */
+}
+
+.container > div {
+	outline: 1px solid black; /* for debugging */
+	flex: 1;
+}
+div .wider {
+	flex: 2;
+	background-color: rgba(0, 100, 0, 0.1); /* for debugging */
+}
