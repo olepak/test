@@ -7,11 +7,16 @@
 	background-color: rgba(0, 100, 0, 0.1); /* for debugging */
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* for debugging */
 	text-align: center;
-	flex: 1 1 0;
+	/* flex: 1 1 0; */
 }
-.two {
-}
+
 .other {
 	outline: 1px solid black; /* for debugging */
 	width: min-content;
+}
+@media screen (min-width: 800px) {
+	.parent {
+		width: 400px;
+		flex-direction: column;
+	}
 }
