@@ -1,22 +1,24 @@
-.parent {
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+.container {
+	max-width: 900px;
+	margin: 0 auto;
+	outline: 1px solid black; /* for debugging */
+	height: 1000px;
+	padding-top: 1px;
+}
+.flex-parent {
 	display: flex;
-	outline: 1px solid black; /* for debugging */
+	margin-top: 90px;
+	outline: 1px solid blue; /* for debugging */
 }
-.child {
-	outline: 1px solid black; /* for debugging */
-	background-color: rgba(0, 100, 0, 0.1); /* for debugging */
-	box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* for debugging */
+.flex-item {
 	text-align: center;
-	/* flex: 1 1 0; */
-}
-
-.other {
+	flex: 1 1 auto;
+	padding: 0.5em;
+	background-color: rgba(0, 100, 0, 0.1); /* for debugging */
 	outline: 1px solid black; /* for debugging */
-	width: min-content;
-}
-@media screen and (max-width: 800px) {
-	.parent {
-		flex-direction: column;
-		width: 500px;
-	}
 }
