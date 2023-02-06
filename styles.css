@@ -7,9 +7,16 @@
 }
 
 .item {
-	width: 60px;
 	height: 60px;
 	border: 4px solid darkslategray;
 	background: skyblue;
-	flex: 0 0 auto;
+}
+
+.one {
+	width: 300px;
+	flex: 1 1 auto;
+}
+.two {
+	width: 600px;
+	flex: 3 3 auto;
 }
