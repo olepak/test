@@ -1,7 +1,9 @@
-let message = "Hi mom!";
-let hello;
-hello = message;
-console.log(message);
-console.log(hello);
+let name = "John";
+let admin;
+admin = name;
+console.log(admin);
 
-let word = "This";
+let ourPlanetName = "Earth";
+
+let currentUserName;
+let reallylongname;
