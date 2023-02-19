@@ -1,4 +1,7 @@
-let message;
+let message = "Hi mom!";
+let hello;
+hello = message;
+console.log(message);
+console.log(hello);
 
-message = "Hello";
-// store string 'Hello' in the variable message
+let word = "This";
