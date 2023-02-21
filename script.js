@@ -1,9 +1,16 @@
-let name = "John";
-let admin;
-admin = name;
-console.log(admin);
+const ORANGE = "1111";
+const RED = "2222";
+const BLUE = "33333";
+const GREEN = "33333";
 
-let ourPlanetName = "Earth";
+console.log(ORANGE);
+let user = ORANGE;
+console.log(ORANGE);
 
-let currentUserName;
-let reallylongname;
+user = "222";
+console.log(user);
+
+let otherUser = "333";
+console.log(otherUser);
+otherUser = 3 + 2;
+console.log(otherUser);
