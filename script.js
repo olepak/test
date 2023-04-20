@@ -1,3 +1,3 @@
-let myNumber = "73";
-myNumber = Number(myNumber) + 3;
-console.log(myNumber);
+let a = "this";
+a = "that";
+console.log(a);
