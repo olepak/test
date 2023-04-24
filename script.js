@@ -1,4 +1,3 @@
-let x = new Number(500);
-let y = new Number(500);
-console.log(x == y);
-console.log(x === y);
+let num1 = 4;
+num1++;
+console.log(num1);
