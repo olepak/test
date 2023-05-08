@@ -1,10 +1,5 @@
-let text1 = "ef";
-let text2 = "cd";
-let result = text1.localeCompare(text2);
-console.log(result);
-let text3 = "bubble";
-let text4 = "doodle";
-result = text3.localeCompare(text4);
-console.log(result);
-result = text4.localeCompare(text3);
-console.log(result);
+let a = 0;
+console.log(Boolean(a));
+let b = "0";
+console.log(Boolean(b));
+alert(a == b);
