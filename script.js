@@ -4,3 +4,4 @@ if (age <= 90 && age >= 14) {
 } else {
 	console.log(`Your are is ${age} and it is not within the range`);
 }
+console.log("This is test");
