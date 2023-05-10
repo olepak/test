@@ -1,7 +1,16 @@
-let age = prompt("What is your age?");
-if (age <= 90 && age >= 14) {
-	console.log(`Your age is ${age} and it is well within the range`);
+let login = prompt("enter login", "");
+
+if (login === "Admin") {
+	let pass = prompt("enter password");
+	if (pass === "TheMaster") {
+		alert("Welcome");
+	} else if (pass === null || pass === "") {
+		alert("Canceled");
+	} else {
+		alert("Wrong password");
+	}
+} else if (login === null || login === "") {
+	alert("Canceled");
 } else {
-	console.log(`Your are is ${age} and it is not within the range`);
+	alert("I do not know you");
 }
-console.log("This is test");
