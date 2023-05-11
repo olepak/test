@@ -1,16 +1,26 @@
-let login = prompt("enter login", "");
-
+let login = prompt("Enter login", "");
+// check login
 if (login === "Admin") {
-	let pass = prompt("enter password");
+	// enter password
+	let pass = prompt("Enter password", "");
+	// check password
 	if (pass === "TheMaster") {
-		alert("Welcome");
-	} else if (pass === null || pass === "") {
+		alert("Welcome!");
+	}
+	// show "Canceled" on pressing ESC or empty input
+	else if (pass === null || pass === "") {
 		alert("Canceled");
-	} else {
+	}
+	// show "Canceled" on another string input
+	else {
 		alert("Wrong password");
 	}
-} else if (login === null || login === "") {
+}
+// show "Canceled" on pressing ESC or empty input
+else if (login === null || login === "") {
 	alert("Canceled");
-} else {
-	alert("I do not know you");
+}
+// show "I don't know you" on another string input
+else {
+	alert("I don't know you");
 }
