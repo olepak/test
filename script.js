@@ -6,3 +6,4 @@ let message =
 		: login == ""
 		? "No login"
 		: "";
+console.log("some text");
