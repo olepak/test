@@ -1,9 +1,16 @@
-const myArray = [1, 2, 3];
-const doubledArray = myArray.map((item) => item * 2);
-console.log("it was arrow function", doubledArray);
-// My favorite animal function
-
-function myFavoriteAnimal(animal) {
-	return animal + " " + "is my favorite animal";
+alert(myFunction(prompt("What is your favorite animal?")));
+function myFunction(animal) {
+	return animal + "is my favorite animal";
 }
-alert(myFavoriteAnimal(prompt("What is your favorite animal?")));
+// function expression
+alert(
+	(function (animal) {
+		return animal + " " + "this is how function expression works";
+	})(prompt("what is your func expression?"))
+);
+// arrow function
+alert(
+	((animal) => animal + " " + "is arrow function")(
+		prompt("What is your favorite arrow")
+	)
+);
