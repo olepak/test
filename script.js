@@ -15,7 +15,7 @@ function showSum(result) {
 	alert("Here is the result: " + result);
 }
 function showNotaNumber() {
-	alert("You are fucking idiot");
+	alert("There is not number input");
 }
 sumTwoNumbers(
 	checkIfNumber(prompt("Enter first nunber")),
