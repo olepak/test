@@ -18,7 +18,7 @@ function showNotaNumber() {
 	alert("There is not number input");
 }
 sumTwoNumbers(
-	checkIfNumber(prompt("Enter first nunber")),
+	checkIfNumber(prompt("Enter first number")),
 	checkIfNumber(prompt("Enter second number")),
 	showSum,
 	showNotaNumber
