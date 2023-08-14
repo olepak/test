@@ -49,11 +49,14 @@ console.clear(); // THIS LINE CLEARS THE CONSOLE
 // Exit loop with break
 console.log("         Exit loop with break");
 const myNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-let myChoice = prompt("Enter any number");
+let myChoice = 11;
 myChoice = +myChoice;
 for (i = 0; i < myNumbers.length; i++) {
 	if (myChoice === myNumbers[i]) {
 		console.log("Found");
 		break;
 	}
+}
+if (myChoice !== myNumbers[i]) {
+	console.log("Not found");
 }
