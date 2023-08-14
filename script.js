@@ -11,7 +11,7 @@ function toUpper(string) {
 	return string.toUpperCase();
 }
 const upperCats = cats.map(toUpper);
-for (const upperCat of upperCats) {
+for (let upperCat of upperCats) {
 	console.log(upperCat);
 }
 // filter
@@ -22,4 +22,9 @@ function lCat(cat) {
 const filtered = cats.filter(lCat);
 for (const filter of filtered) {
 	console.log(filter);
+}
+
+// test for loop
+for (let i = 1; i < 11; i++) {
+	console.log(`$i * $i = ($i * $i)`);
 }
