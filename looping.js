@@ -44,8 +44,6 @@ for (let i = 0; i < catNames.length; i++) {
 }
 console.log(myFavoriteCat);
 
-console.clear(); // THIS LINE CLEARS THE CONSOLE
-
 // Exit loop with break
 console.log("         Exit loop with break");
 const myNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -60,15 +58,20 @@ for (i = 0; i < myNumbers.length; i++) {
 if (myChoice !== myNumbers[i]) {
 	console.log("Not found");
 }
-// Skipping iterations with continue
-console.log("         Skipping iterations with continue");
-let num = prompt("Enter number");
-num = +num;
-let accumulated;
-for (let i = 1; i < num; i++) {
-	let sqRoot = Math.sqrt(i);
-if (Math.floor (sqRoot) !== sqRoot){
 
-}
-accumulated +=
-}
+console.clear(); // THIS LINE CLEARS THE CONSOLE
+// Skipping iterations with continue
+console.log("        Skipping iterations with continue");
+let num = prompt("Enter any number within the range of 1 - 100 000");
+num = +num;
+if (num >= 1 && num <= 100000000) {
+	let accumulated = "";
+	for (i = 1; i < num; i++) {
+		let sqRoot = Math.sqrt(i);
+		if (Math.floor(sqRoot) !== sqRoot) {
+			continue;
+		}
+		accumulated += ` ${i}`;
+	}
+	console.log(accumulated);
+} else alert("Wrong input!");
