@@ -5,6 +5,7 @@ console.log('        Here is how "for ... of" works');
 for (const cat of cats) {
 	console.log(cat);
 }
+
 // map
 console.log('         Here is how "map" works');
 function toUpper(string) {
