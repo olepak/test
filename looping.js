@@ -60,3 +60,15 @@ for (i = 0; i < myNumbers.length; i++) {
 if (myChoice !== myNumbers[i]) {
 	console.log("Not found");
 }
+// Skipping iterations with continue
+console.log("         Skipping iterations with continue");
+let num = prompt("Enter number");
+num = +num;
+let accumulated;
+for (let i = 1; i < num; i++) {
+	let sqRoot = Math.sqrt(i);
+if (Math.floor (sqRoot) !== sqRoot){
+
+}
+accumulated +=
+}
