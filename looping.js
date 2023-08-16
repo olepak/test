@@ -142,10 +142,9 @@ function foreverLoop() {
 function oddWithContinue() {
 	console.log("         output odd values using continue ");
 	let accumulated = "";
-	for (let i = 1; i < 120; i++) {
+	for (let i = 1; i < 100; i++) {
 		if (i % 2 == 0) continue;
 		accumulated += ` ${i}`;
 	}
 	console.log(accumulated);
 }
-oddWithContinue();
