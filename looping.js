@@ -1,3 +1,4 @@
+"use strict";
 // for ... of
 function forOf() {
 	console.clear();
@@ -11,6 +12,7 @@ function forOf() {
 // map
 function map() {
 	console.log('         Here is how "map" works');
+	const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
 	function toUpper(string) {
 		return string.toUpperCase();
 	}
@@ -22,6 +24,7 @@ function map() {
 
 // filter
 function filter() {
+	const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
 	console.log('         Here is how "filter" works');
 	function lCat(cat) {
 		return cat.startsWith("L");
@@ -39,7 +42,6 @@ function testForLoop() {
 		console.log(`${i} * ${i} = ${i * i}`);
 	}
 }
-
 // the for loop through an array
 function loopThroughAnArray() {
 	console.log("         For loop through an array");
@@ -125,3 +127,25 @@ function doWhileLoop() {
 	}
 	console.log(myFavoriteCat);
 }
+
+// test for loop that runs forever
+function foreverLoop() {
+	console.log("         loop that runs forever. Just remove the i++ line.");
+	let i = 0;
+	while (i < 3) {
+		console.log(i);
+		i++;
+	}
+}
+
+// output odd values using continue
+function oddWithContinue() {
+	console.log("         output odd values using continue ");
+	let accumulated = "";
+	for (let i = 1; i < 120; i++) {
+		if (i % 2 == 0) continue;
+		accumulated += ` ${i}`;
+	}
+	console.log(accumulated);
+}
+oddWithContinue();
