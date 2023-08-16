@@ -1,4 +1,5 @@
 "use strict";
+
 // for ... of
 function forOf() {
 	console.clear();
@@ -42,6 +43,7 @@ function testForLoop() {
 		console.log(`${i} * ${i} = ${i * i}`);
 	}
 }
+
 // the for loop through an array
 function loopThroughAnArray() {
 	console.log("         For loop through an array");
