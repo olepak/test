@@ -150,3 +150,21 @@ function oddWithContinue() {
 	}
 	console.log(accumulated);
 }
+
+// labels for break/continue
+function labelsForBreakOrContinue() {
+	console.log("         labels for break/continue");
+	outer: for (let i = 0; i < 3; i++) {
+		for (let j = 0; j < 3; j++) {
+			let input = prompt(`Value at coord (${i}, ${j})`);
+			if (!input || isNaN(input)) {
+				alert("Incorrect input. The operation will be finished");
+				break outer; // here is where break with label steps in
+			}
+			console.log(`the value for ${i}, ${j} is ${input}`);
+		}
+	}
+	alert("Done!");
+}
+
+labelsForBreakOrContinue();
