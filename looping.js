@@ -1,3 +1,4 @@
+/*
 // for ... of
 console.clear();
 const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
@@ -60,7 +61,7 @@ if (myChoice !== myNumbers[i]) {
 	console.log("Not found");
 }
 
-console.clear(); // THIS LINE CLEARS THE CONSOLE
+
 // Skipping iterations with continue
 console.log("        Skipping iterations with continue");
 let num = prompt("Enter any number within the range of 1 - 100 000");
@@ -76,3 +77,36 @@ if (num >= 1 && num <= 100000000) {
 	}
 	console.log(accumulated);
 } else alert("Wrong input!");
+
+// While
+console.log("        While");
+const catNames = ["Pete", "Biggles", "Jasmine"];
+let myFavoriteCat = "My favorite cats are";
+let i = 0;
+while (i < catNames.length) {
+	if (i === catNames.length - 1) {
+		myFavoriteCat += ` and ${catNames[i]}.`;
+	} else {
+		myFavoriteCat += ` ${catNames[i]},`;
+	}
+	i++;
+}
+console.log(myFavoriteCat);
+*/
+
+// do....while
+console.log("        do...while");
+const catNames = ["Pete", "Biggles", "Jasmine"];
+let myFavoriteCat = "My favorite cats are";
+let i = 0;
+do {
+	if (i === catNames.length - 1) {
+		myFavoriteCat += ` and ${catNames[i]}.`;
+	} else {
+		myFavoriteCat += ` ${catNames[i]},`;
+	}
+	i++;
+} while (i < catNames.length);
+{
+}
+console.log(myFavoriteCat);
