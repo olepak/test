@@ -1,112 +1,127 @@
-/*
 // for ... of
-console.clear();
-const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
-console.log('        Here is how "for ... of" works');
-for (const cat of cats) {
-	console.log(cat);
+function forOf() {
+	console.clear();
+	const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
+	console.log('        Here is how "for ... of" works');
+	for (const cat of cats) {
+		console.log(cat);
+	}
 }
 
 // map
-console.log('         Here is how "map" works');
-function toUpper(string) {
-	return string.toUpperCase();
-}
-const upperCats = cats.map(toUpper);
-for (const upperCat of upperCats) {
-	console.log(upperCat);
+function map() {
+	console.log('         Here is how "map" works');
+	function toUpper(string) {
+		return string.toUpperCase();
+	}
+	const upperCats = cats.map(toUpper);
+	for (const upperCat of upperCats) {
+		console.log(upperCat);
+	}
 }
 
 // filter
-console.log('         Here is how "filter" works');
-function lCat(cat) {
-	return cat.startsWith("L");
-}
-const filtered = cats.filter(lCat);
-for (const filter of filtered) {
-	console.log(filter);
+function filter() {
+	console.log('         Here is how "filter" works');
+	function lCat(cat) {
+		return cat.startsWith("L");
+	}
+	const filtered = cats.filter(lCat);
+	for (const filter of filtered) {
+		console.log(filter);
+	}
 }
 
 // test for loop
-console.log("         This is a test for loop");
-for (let i = 1; i < 11; i++) {
-	console.log(`${i} * ${i} = ${i * i}`);
+function testForLoop() {
+	console.log("         This is a test for loop");
+	for (let i = 1; i < 11; i++) {
+		console.log(`${i} * ${i} = ${i * i}`);
+	}
 }
 
 // the for loop through an array
-console.log("         For loop through an array");
-const catNames = ["Pete", "Biggles", "Jasmine"];
-let myFavoriteCat = "My favorite cats are";
-for (let i = 0; i < catNames.length; i++) {
-	if (i === catNames.length - 1) {
-		myFavoriteCat += ` and ${catNames[i]}.`;
-	} else {
-		myFavoriteCat += ` ${catNames[i]},`;
+function loopThroughAnArray() {
+	console.log("         For loop through an array");
+	const catNames = ["Pete", "Biggles", "Jasmine"];
+	let myFavoriteCat = "My favorite cats are";
+	for (let i = 0; i < catNames.length; i++) {
+		if (i === catNames.length - 1) {
+			myFavoriteCat += ` and ${catNames[i]}.`;
+		} else {
+			myFavoriteCat += ` ${catNames[i]},`;
+		}
 	}
+	console.log(myFavoriteCat);
 }
-console.log(myFavoriteCat);
 
 // Exit loop with break
-console.log("         Exit loop with break");
-const myNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-let myChoice = 11;
-myChoice = +myChoice;
-for (i = 0; i < myNumbers.length; i++) {
-	if (myChoice === myNumbers[i]) {
-		console.log("Found");
-		break;
+function exitLoopWithBreak() {
+	console.log("         Exit loop with break");
+	const myNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+	let myChoice = 11;
+	myChoice = +myChoice;
+	for (i = 0; i < myNumbers.length; i++) {
+		if (myChoice === myNumbers[i]) {
+			console.log("Found");
+			break;
+		}
+	}
+	if (myChoice !== myNumbers[i]) {
+		console.log("Not found");
 	}
 }
-if (myChoice !== myNumbers[i]) {
-	console.log("Not found");
-}
-
 
 // Skipping iterations with continue
-console.log("        Skipping iterations with continue");
-let num = prompt("Enter any number within the range of 1 - 100 000");
-num = +num;
-if (num >= 1 && num <= 100000000) {
-	let accumulated = "";
-	for (i = 1; i < num; i++) {
-		let sqRoot = Math.sqrt(i);
-		if (Math.floor(sqRoot) !== sqRoot) {
-			continue;
+function skipWithContinue() {
+	console.log("        Skipping iterations with continue");
+	let num = prompt("Enter any number within the range of 1 - 100 000");
+	num = +num;
+	if (num >= 1 && num <= 100000000) {
+		let accumulated = "";
+		for (i = 1; i < num; i++) {
+			let sqRoot = Math.sqrt(i);
+			if (Math.floor(sqRoot) !== sqRoot) {
+				continue;
+			}
+			accumulated += ` ${i}`;
 		}
-		accumulated += ` ${i}`;
-	}
-	console.log(accumulated);
-} else alert("Wrong input!");
+		console.log(accumulated);
+	} else alert("Wrong input!");
+}
 
 // While
-console.log("        While");
-const catNames = ["Pete", "Biggles", "Jasmine"];
-let myFavoriteCat = "My favorite cats are";
-let i = 0;
-while (i < catNames.length) {
-	if (i === catNames.length - 1) {
-		myFavoriteCat += ` and ${catNames[i]}.`;
-	} else {
-		myFavoriteCat += ` ${catNames[i]},`;
+function whileLoop() {
+	console.log("        While");
+	const catNames = ["Pete", "Biggles", "Jasmine"];
+	let myFavoriteCat = "My favorite cats are";
+	let i = 0;
+	while (i < catNames.length) {
+		if (i === catNames.length - 1) {
+			myFavoriteCat += ` and ${catNames[i]}.`;
+		} else {
+			myFavoriteCat += ` ${catNames[i]},`;
+		}
+		i++;
 	}
-	i++;
+	console.log(myFavoriteCat);
 }
-console.log(myFavoriteCat);
-*/
 
 // do....while
-console.log("        do...while");
-const catNames = ["Pete", "Biggles", "Jasmine"];
-let myFavoriteCat = "My favorite cats are";
-let i = 0;
-do {
-	if (i === catNames.length - 1) {
-		myFavoriteCat += ` and ${catNames[i]}.`;
-	} else {
-		myFavoriteCat += ` ${catNames[i]},`;
+function doWhileLoop() {
+	console.log("        do...while");
+	const catNames = ["Pete", "Biggles", "Jasmine"];
+	let myFavoriteCat = "My favorite cats are";
+	let i = 0;
+	do {
+		if (i === catNames.length - 1) {
+			myFavoriteCat += ` and ${catNames[i]}.`;
+		} else {
+			myFavoriteCat += ` ${catNames[i]},`;
+		}
+		i++;
+	} while (i < catNames.length);
+	{
 	}
-	i++;
-} while (i < catNames.length);
-{
+	console.log(myFavoriteCat);
 }
-console.log(myFavoriteCat);
