@@ -1,8 +1,6 @@
-console.log(5 % 5);
-/*
-for i=1 to n
-  if n % 1 == 0
-	{accumulated += i}
-	else{continue}
-console.log(accumulated)
-*/
+let n = parseInt(prompt("Enter any number"));
+if (isNaN(n)) {
+	alert("Incorrect input");
+} else {
+	alert(n);
+}
