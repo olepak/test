@@ -47,3 +47,4 @@ function primeUsingLabel() {
 		alert(i);
 	}
 }
+outputPrimeNumbers();
