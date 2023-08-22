@@ -1,4 +1,3 @@
-let input = "olleh";
-let output = input.split("").reverse().join("");
-console.log(output);
-alert(output);
+const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const citrus = fruits.slice(2, 3);
+console.log(citrus);
