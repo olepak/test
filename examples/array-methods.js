@@ -47,5 +47,37 @@ function constructor() {
 	console.log(text);
 }
 
-// copyWithin() copies array elements to another position in the array, \
+// copyWithin() copies array elements to another position in the array,
 // overwrites the existing values (does not add items to the array), and returns the changed array
+// syntax: array.copyWithin (target, start, end)
+// target - required. The index position to copy the elements to.
+// start - optional. Index of the first element of copied row. Default is 0
+// end - optional. (end-1) is the index of the last element of copied row. Default is the array length
+// 1 - copy the first two elements to the last two array elements
+function copyWithin() {
+	const fruits = ["Banana", "Orange", "Apple", "Mango"];
+	fruits.copyWithin(2);
+	console.log(
+		"1 - Copy the first two elements to the last two array elements:"
+	);
+	console.log(fruits);
+	// 2 - copy the first two array elements to the third and fourth position
+	const fruits2 = ["Banana", "Orange", "Apple", "Mango", "Kiwi"];
+	fruits2.copyWithin(2, 0, 2);
+	console.log(
+		"2 - Copy the first two array elements to the third and fourth position"
+	);
+	console.log(fruits2);
+	// 3 - it can take negative values and always returns changed array
+	// if the value is negative it treats like length + negative value
+	const myArray = ["q", "w", "e", "r", "t", "y", "u", "i", "o"];
+	const myArray2 = myArray.copyWithin(0, -4, -1);
+	console.log(
+		"3 - It can take negative values and always returns modified array"
+	);
+	console.log(myArray);
+	console.log(myArray2);
+	console.log(myArray === myArray2);
+}
+
+copyWithin();
