@@ -80,4 +80,16 @@ function copyWithin() {
 	console.log(myArray === myArray2);
 }
 
-copyWithin();
+// entries()
+function entries() {
+	const fruits = ["Banana", "Orange", "Apple", "Mango"];
+	console.log(fruits);
+	const f = fruits.entries();
+	for (let x of f) {
+		console.log(x);
+	}
+	for (let fruit of fruits) {
+		console.log(fruit);
+	}
+}
+entries();
