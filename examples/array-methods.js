@@ -30,6 +30,10 @@ function concat() {
 	const arr5 = [[5, 6], 7, 8];
 	const arr6 = arr4.concat(arr5);
 	console.log("4 - Concatenate nested arrays:" + arr6);
-	// 5 acts like push method
+	// 5 acts like push method i.e appends any values to the end
+	const arr7 = fruits.concat(1, 2, "anyvalue");
+	console.log(
+		`5 - acts like push method i.e appends any values to the end: ${arr7} `
+	);
 }
 concat();
