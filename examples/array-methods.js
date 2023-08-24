@@ -105,5 +105,13 @@ function entries() {
 
 // check if all values in ages[] are over 18:
 function every() {
-	const ages = [32, 33, 16, 40];
+	const ages = [32, 33, 30, 19];
+	function checkAge(age) {
+		return age > 18;
+	}
+	const res = ages.every(checkAge);
+	console.clear;
+	console.log(res);
 }
+every();
+// 7 fill() method fills specified elements in an array with
