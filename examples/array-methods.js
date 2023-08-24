@@ -1,4 +1,4 @@
-// at() returns an indexed element from an array
+// 1 at() returns an indexed element from an array
 function at() {
 	const fruits = ["Banana", "Orange", "Apple", "Mango"];
 	let index = 2;
@@ -11,7 +11,7 @@ function at() {
 	console.log(fruit3);
 }
 
-// concat() joins two or more arrays and returns new joined array
+// 2 concat() joins two or more arrays and returns new joined array
 function concat() {
 	// 1 merges two or more arrays
 	const fruits = ["Banana", "Orange", "Apple", "Mango"];
@@ -40,14 +40,14 @@ function concat() {
 	console.log(`6 - Creates copy of an array if no argument provided: ${arr8}`);
 }
 
-// constructor property returns the function that crated the Array prototype
+// 3 constructor property returns the function that crated the Array prototype
 function constructor() {
 	const fruits = ["Banana", "Orange", "Apple", "Mango"];
 	let text = fruits.constructor;
 	console.log(text);
 }
 
-// copyWithin() copies array elements to another position in the array,
+// 4 copyWithin() copies array elements to another position in the array,
 // overwrites the existing values (does not add items to the array), and returns the changed array
 // syntax: array.copyWithin (target, start, end)
 // target - required. The index position to copy the elements to.
@@ -80,16 +80,22 @@ function copyWithin() {
 	console.log(myArray === myArray2);
 }
 
-// entries()
+// 5 entries() method returns an Array iterator object with key/value pairs
+// entries () method does not change the original array
 function entries() {
 	const fruits = ["Banana", "Orange", "Apple", "Mango"];
+	console.log("Here is the original array:");
 	console.log(fruits);
+	console.log(
+		"Here is the iteration over key/value pair after entries() method being applied"
+	);
+
 	const f = fruits.entries();
 	for (let x of f) {
 		console.log(x);
 	}
-	for (let fruit of fruits) {
-		console.log(fruit);
-	}
 }
-entries();
+
+// 6 every() method executes function for each array element
+// every () method returns true if the function returns true for all elements
+// every () returns false
