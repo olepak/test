@@ -97,5 +97,13 @@ function entries() {
 }
 
 // 6 every() method executes function for each array element
-// every () method returns true if the function returns true for all elements
-// every () returns false
+// every() method returns true if the function returns true for all elements
+// every() returns false if the function returns false for one element
+// every() method does not execute the function for empty elements
+// every() method does not change the original array
+// return value is Boolean. true if all elements pass the test, otherwise false
+
+// check if all values in ages[] are over 18:
+function every() {
+	const ages = [32, 33, 16, 40];
+}
