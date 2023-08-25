@@ -112,6 +112,37 @@ function every() {
 	const res = ages.every(checkAge);
 	console.log(res);
 }
-every();
 
-// 7 fill() method fills specified elements in an array with
+// 7 fill() method fills specified elements in an array with a value
+// fill() method overwrites the original array
+// start and end position can be specified. If not , all elements will be filled
+// syntax: array.fill (value, start, end)
+// value  - Required. The value to fill in.
+// start - Optional. The start index position. Default is 0.
+// end - Optional. The stop index position. Not included. Default is array length.
+function fill() {
+	// fill all the elements with the value
+	const fruits = ["Banana", "Orange", "Apple", "Mango"];
+	fruits.fill("Kiwi");
+	console.log(fruits);
+	// fill the last two elements
+	const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+	fruits2.fill("Kiwi", 2, 6);
+	console.log(fruits2);
+	// it always returns changed (filled) array
+	const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+	console.log(numbers);
+	const numbers2 = numbers.fill(1);
+	console.log(numbers === numbers2);
+	// filling the array with numbers
+	function fillNumbers(n) {
+		return Array(n)
+			.fill(0)
+			.map((_, idx) => idx + 1);
+	}
+	console.log(fillNumbers(10));
+}
+fill();
+// 8 filter() method creates a new array filled with elements that pass a test provided by a function
+// the filter() method does not execute the function for empty elements
+// the filter() method does not change the original array
