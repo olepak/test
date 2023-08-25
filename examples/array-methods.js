@@ -110,8 +110,8 @@ function every() {
 		return age > 18;
 	}
 	const res = ages.every(checkAge);
-	console.clear;
 	console.log(res);
 }
 every();
+
 // 7 fill() method fills specified elements in an array with
