@@ -142,7 +142,23 @@ function fill() {
 	}
 	console.log(fillNumbers(10));
 }
-fill();
+
 // 8 filter() method creates a new array filled with elements that pass a test provided by a function
 // the filter() method does not execute the function for empty elements
 // the filter() method does not change the original array
+function filter() {
+	const numbers = [775, 7, 985, 6, 9485, 11, 12, 85905, 47];
+	function checkNumber(age) {
+		return age < 18;
+	}
+	const numberLessThanEighteen = numbers.filter(checkNumber);
+	console.log(numberLessThanEighteen);
+}
+// filtering unique numbers from an array https://www.youtube.com/watch?v=IXp06KekEjM&list=PLgBH1CvjOA62PBFIDq55-S6Beivje30A2&index=4
+function filter2() {
+	const numbers = [1, 2, 3, 2, 1, 3, 3, 5, 4, 6];
+	const nums = numbers.filter((value, index, arr) => {
+		return arr.indexOf(value) === index;
+	});
+	console.log(nums);
+}
