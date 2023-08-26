@@ -147,6 +147,7 @@ function fill() {
 // the filter() method does not execute the function for empty elements
 // the filter() method does not change the original array
 function filter() {
+	// return an array of all values in ages[] that are over 18:
 	const numbers = [775, 7, 985, 6, 9485, 11, 12, 85905, 47];
 	function checkNumber(age) {
 		return age < 18;
@@ -162,3 +163,32 @@ function filter2() {
 	});
 	console.log(nums);
 }
+
+// 9 find() method returns the value  of the first element that passes the test
+// find() method executes a function for each array element
+// find() method returns undefined if no elements are found
+// find() method does not change the original array
+function find() {
+	// find the value of the first element with a value over 18
+	const ages = [3, 18, 12, 23, 10, 17, 33, 44, 55];
+	console.log(
+		ages.find((age) => {
+			return age > 18;
+		})
+	);
+}
+
+// 10 findIndex() method executes a function for each array element
+// findIndex() method returns the index(position) of the first element that passes the test
+// findIndex() returns -1 if no match is found
+// findIndex() does not change the original array
+function findIndex() {
+	// find the index of the first element that are over than specified
+	const ages = [3, 18, 12, 23, 10, 17, 33, 44, 55];
+	console.log(
+		ages.findIndex((age) => {
+			return age > 20;
+		})
+	);
+}
+findIndex();
