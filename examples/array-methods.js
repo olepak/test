@@ -185,6 +185,7 @@ function find() {
 function findIndex() {
 	// find the index of the first element that are over than specified
 	const ages = [3, 18, 12, 23, 10, 17, 33, 44, 55];
+	let userAge = parseInt(prompt("What is your age?"));
 	console.log(
 		ages.findIndex((age) => {
 			return age > 20;
