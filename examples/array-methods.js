@@ -209,7 +209,6 @@ function flat() {
 	const myArr3 = [1, 2, [3, [4, 5, 6], 7], 8];
 	console.log(myArr3.flat(Infinity));
 }
-flat();
 
 // 12 flatMap() method maps all array elements and creates a new flat array only with depth of 1
 // flatMap() creates a new array from calling a function for every array element
