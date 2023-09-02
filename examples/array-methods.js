@@ -185,11 +185,50 @@ function find() {
 function findIndex() {
 	// find the index of the first element that are over than specified
 	const ages = [3, 18, 12, 23, 10, 17, 33, 44, 55];
-	let userAge = parseInt(prompt("What is your age?"));
 	console.log(
 		ages.findIndex((age) => {
-			return age > 20;
+			return age === 55;
 		})
 	);
 }
-findIndex();
+
+// 11 flat() method concatenates sub-array elements
+// flat() method does not change the original array
+// syntax array.flat(depth)
+// depth - optional, how deep a nested array should be flattened.Default is 1.
+function flat() {
+	const myArr = [
+		[1, 2],
+		[3, 4],
+		[5, 6],
+	];
+	console.log(myArr.flat());
+	const myArr2 = [1, 2, [3, [4, 5, 6], 7], 8];
+	console.log(myArr2.flat(2));
+	// flat to infinity
+	const myArr3 = [1, 2, [3, [4, 5, 6], 7], 8];
+	console.log(myArr3.flat(Infinity));
+}
+flat();
+
+// 12 flatMap() method maps all array elements and creates a new flat array only with depth of 1
+// flatMap() creates a new array from calling a function for every array element
+// flatMap() does not change the original array
+function flatMap() {
+	// acts like a map() in the most easy case
+	const myArr = [1, 2, 3, 4, 5, 6];
+	const newArray = myArr.flatMap((x) => x * 2);
+	console.log(newArray);
+	// it is useful when returned  mapped value is an array and there is a need to flatten it
+	const newArray2 = myArr.flatMap((x) => [x, x * 2]);
+	console.log(newArray2);
+	const pairs = [
+		[1, 2],
+		[3, 4],
+		[5, 6],
+	];
+	const result = pairs.flatMap(function (pair) {
+		return [pair[0] + pair[1]];
+	});
+	console.log(result);
+}
