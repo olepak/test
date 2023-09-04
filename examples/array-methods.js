@@ -310,3 +310,13 @@ function indexOf() {
 // 17 isArray() method returns true if an object is an array, otherwise false
 //  it can only be used as Array.isArray().
 // Using x.isArray(), where x is an array will return false
+// return value - boolean
+function isArray() {
+	// check if an object is an array
+	const fruits = ["Banana", "Orange", "Apple", "Mango"];
+	console.log(Array.isArray(fruits));
+	// check if another data type is an array
+	let text = "Some text";
+	console.log(Array.isArray(text));
+}
+isArray();
