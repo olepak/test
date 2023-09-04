@@ -231,3 +231,47 @@ function flatMap() {
 	});
 	console.log(result);
 }
+
+// 13 forEach() method calls a function for each element in an array
+// return value - undefined
+function forEach() {
+	// compute the sum
+	let sum = 0;
+	const numbers = [33, 93, 94, 93];
+	console.log(numbers);
+
+	function sumItems(item) {
+		sum += item;
+	}
+	numbers.forEach(sumItems);
+	console.log(sum);
+	// multiply each element
+	function multiplyItems(item, index, arr) {
+		arr[index] = item * 10;
+	}
+	numbers.forEach(multiplyItems);
+	console.log(numbers);
+}
+
+// 14 from() method returns an array from any object with a length property
+// from() method returns an array from any iterable object
+// Array.from is a static property of the JavaScript Array object.
+// it can be only used as Array.from().
+// Using x.from(), where x is an array will return undefined
+// syntax Array.from(object, mapFunction, thisValue):
+// object - Required The object to convert to an array
+// mapFunction Optional A map function to call on each item
+function from() {
+	// create an array from a string
+	let text = "ABCDEF";
+	const myArr = Array.from(text);
+	console.log(myArr);
+	// create an array from a string of numbers
+	let num = "1234567";
+	const res = Array.from(num, mapFn);
+	function mapFn(x) {
+		return (x = +x);
+	}
+	console.log(res);
+}
+from();
