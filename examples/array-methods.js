@@ -274,4 +274,17 @@ function from() {
 	}
 	console.log(res);
 }
-from();
+
+// 15 includes() method returns true if an array contains a specified value.
+// includes() method returns false if the value is not found
+// includes method is case sensitive
+// syntax array.includes(element, start)
+// returned value - boolean
+function includes() {
+	const fruits = ["Banana", "Orange", "Apple", "Mango"];
+	console.log(fruits.includes("Banana"));
+	console.log(fruits.includes("Orange", 1));
+	console.log(fruits.includes("Lemon"));
+	console.log(fruits.includes("Mango", 4));
+}
+includes();
