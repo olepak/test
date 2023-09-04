@@ -287,4 +287,26 @@ function includes() {
 	console.log(fruits.includes("Lemon"));
 	console.log(fruits.includes("Mango", 4));
 }
-includes();
+
+// 16 indexOf() method returns the first index(position) of a specified value
+// it returns -1 in the value is not found
+// indexOf() method starts at a specified index and searches from left to right
+// By default the search starts at the first element and ends at the last
+// Negative start values counts from the last element (but still searches from left to right)
+// return value - the index (position) of the first element found
+function indexOf() {
+	// find the first index of "Apple"
+	const fruits = ["Banana", "Orange", "Apple", "Mango", "Apple"];
+	let index = fruits.indexOf("Apple");
+	console.log(index);
+	// Start at index 3
+	let index2 = fruits.indexOf("Apple", 3);
+	console.log(index2);
+	// Negative start value
+	let index3 = fruits.indexOf("Apple", -1);
+	console.log(index3);
+}
+
+// 17 isArray() method returns true if an object is an array, otherwise false
+//  it can only be used as Array.isArray().
+// Using x.isArray(), where x is an array will return false
