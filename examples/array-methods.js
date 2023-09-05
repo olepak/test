@@ -418,7 +418,40 @@ function map() {
 // it changes the original array
 // it returns the removed element
 // returned value - a string , a number, an array or any other type in an array
-const fruits = ["Banana", "Orange", "Apple", "Mango"];
-let popped = fruits.pop();
-console.log(popped);
-console.log(fruits);
+function pop() {
+	const fruits = ["Banana", "Orange", "Apple", "Mango"];
+	let popped = fruits.pop();
+	console.log(popped);
+	console.log(fruits);
+}
+
+// 24 prototype allows to add new properties and methods to arrays
+function prototype() {
+	Array.prototype.myUcase = function () {
+		for (let i = 0; i < this.length; i++) {
+			this[i] = this[i].toUpperCase();
+		}
+	};
+	const fruits = ["Banana", "Orange", "Apple", "Mango"];
+	console.log(fruits);
+	fruits.myUcase();
+	console.log(fruits);
+}
+
+// 25 push() method ads new items to the end of an array
+// it changes the original array
+// it changes the length of an array
+// it returns the new length
+function push() {
+	// add a new item to an array
+	const fruits = ["Banana", "Orange", "Apple", "Mango"];
+	fruits.push("Huyango");
+	console.log(fruits);
+	// it returns the new length
+	let length = fruits.push("Anno", "Lorem");
+	console.log(fruits);
+
+	console.log(length);
+}
+
+push();
