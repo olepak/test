@@ -413,4 +413,12 @@ function map() {
 	const strNumbers = str.map(Number);
 	console.log(strNumbers);
 }
-map();
+
+// 23 pop() method removes (pops) the last element of an array
+// it changes the original array
+// it returns the removed element
+// returned value - a string , a number, an array or any other type in an array
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let popped = fruits.pop();
+console.log(popped);
+console.log(fruits);
