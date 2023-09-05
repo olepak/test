@@ -342,5 +342,6 @@ function keys() {
 		// console.log(text);
 		console.log(x);
 	}
+	console.log(typeof keys2);
 }
 keys();
