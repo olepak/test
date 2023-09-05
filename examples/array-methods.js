@@ -252,7 +252,6 @@ function forEach() {
 	numbers.forEach(multiplyItems);
 	console.log(numbers);
 }
-
 // 14 from() method returns an array from any object with a length property
 // from() method returns an array from any iterable object
 // Array.from is a static property of the JavaScript Array object.
@@ -382,3 +381,36 @@ function lastIndexOf() {
 	let index4 = fruits3.lastIndexOf("Apple", -2);
 	console.log(index4);
 }
+
+// 21 length property sets or returns the number of elements in an array
+function length() {
+	const fruits = ["Banana", "Orange", "Apple", "Mango"];
+	let length = fruits.length;
+	console.log(length);
+}
+
+// 22 map() creates a new array from calling a function for every array element
+// it does not execute the function for empty elements
+// it does not change the original array
+// array.map(function(currentValue, index, arr), thisValue)
+function map() {
+	// return a new array with the square root of all elements
+	const numbers = [4, 9, 16, 25];
+	const numberRoots = numbers.map(Math.sqrt);
+	console.log(numberRoots);
+	// multiply all the values in an array with 10
+	const multiplyNumbers = numbers.map((x) => {
+		return x * 10;
+	});
+	console.log(multiplyNumbers);
+	// multiply all the values with indexes
+	const multiplyNumbersWithIndex = numbers.map((x, index, array) => {
+		return x * index;
+	});
+	console.log(multiplyNumbersWithIndex);
+	// convert array of strings to an array of numbers
+	const str = ["1", "2", "3", "4", "5"];
+	const strNumbers = str.map(Number);
+	console.log(strNumbers);
+}
+map();
