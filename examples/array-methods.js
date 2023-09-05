@@ -466,3 +466,4 @@ function push() {
 // currentIndex- optional. the index of the current element
 // arr - optional. the array the current element belongs to.
 // initialValue - optional. a value to be passed to the function as the initial value
+// return value - the accumulated result from the last call of the callback function
