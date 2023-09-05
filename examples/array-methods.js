@@ -377,5 +377,8 @@ function lastIndexOf() {
 		"Apple",
 	];
 	let index3 = fruits3.lastIndexOf("Apple", 4);
+	console.log(index3);
+	// start the search at the second last position
+	let index4 = fruits3.lastIndexOf("Apple", -2);
+	console.log(index4);
 }
-lastIndexOf();
