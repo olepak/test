@@ -454,4 +454,15 @@ function push() {
 	console.log(length);
 }
 
-push();
+// 26 reduce () method executes the reducer function for an array element.
+// it "compresses" the array into some single value which is obtain by applying some function
+// it returns a single value - the functions' accumulated result.
+// it does not change the original array
+// normally, array element 0 is used as an initial value, and iteration starts from array element 1
+// if and initial value is supplied, this is used, and the iteration starts from array element 0
+// array.reduce (function(total, currentValue, currentIndex, arr), initialValue)
+// total - required. the initialValue, or the previously returned value of the function
+// currentValue - required. the value of the current element
+// currentIndex- optional. the index of the current element
+// arr - optional. the array the current element belongs to.
+// initialValue - optional. a value to be passed to the function as the initial value
