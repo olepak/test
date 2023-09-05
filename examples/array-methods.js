@@ -344,4 +344,38 @@ function keys() {
 	}
 	console.log(typeof keys2);
 }
-keys();
+
+// 20 lastIndexOf() method returns the last index(position) of a specified value
+// it returns -1 if the value is not found
+// it starts at specified index and searches for right to left
+// negative start values counts from the last element (but still searches from right to left)
+function lastIndexOf() {
+	// find the last index of Apple
+	const fruits = ["Apple", "Orange", "Apple", "Mango"];
+	let index = fruits.lastIndexOf("Apple");
+	console.log(index);
+	// more than one Apple
+	const fruits2 = [
+		"Apple",
+		"Orange",
+		"Apple",
+		"Mango",
+		"Banana",
+		"Orange",
+		"Apple",
+	];
+	let index2 = fruits2.lastIndexOf("Apple");
+	console.log(index2);
+	// start search at the position 4
+	const fruits3 = [
+		"Apple",
+		"Orange",
+		"Apple",
+		"Mango",
+		"Banana",
+		"Orange",
+		"Apple",
+	];
+	let index3 = fruits3.lastIndexOf("Apple", 4);
+}
+lastIndexOf();
