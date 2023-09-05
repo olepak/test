@@ -330,4 +330,17 @@ function join() {
 	// another separator
 	let text2 = fruits.join(", and ");
 }
-join();
+
+// 19 keys() method returns an Array iterator object with the keys of an array
+// it does not change the original array
+function keys() {
+	const fruits = ["Banana", "Orange", "Apple", "Mango"];
+	const keys2 = fruits.keys();
+	let text = "";
+	for (let x of keys2) {
+		text += x;
+		// console.log(text);
+		console.log(x);
+	}
+}
+keys();
