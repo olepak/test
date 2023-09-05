@@ -319,4 +319,15 @@ function isArray() {
 	let text = "Some text";
 	console.log(Array.isArray(text));
 }
-isArray();
+
+// 18 join() method returns an array as a string
+// join() method does not change the original array
+// any separator can be specified. Default is comma
+function join() {
+	const fruits = ["Banana", "Orange", "Apple", "Mango"];
+	let text = fruits.join();
+	console.log(text);
+	// another separator
+	let text2 = fruits.join(", and ");
+}
+join();
