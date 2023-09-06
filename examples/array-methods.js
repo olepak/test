@@ -450,7 +450,6 @@ function push() {
 	// it returns the new length
 	let length = fruits.push("Anno", "Lorem");
 	console.log(fruits);
-
 	console.log(length);
 }
 
@@ -467,3 +466,29 @@ function push() {
 // arr - optional. the array the current element belongs to.
 // initialValue - optional. a value to be passed to the function as the initial value
 // return value - the accumulated result from the last call of the callback function
+function reduce() {
+	// subtract all numbers in an array ( iteration starts at the second element, so the initial value of total is the value of the array's first element (position 0) = 175)
+	const numbers = [175, 50, 25];
+	let resultSubtraction = numbers.reduce(subtraction);
+	function subtraction(total, num) {
+		return total - num;
+	}
+	console.log(resultSubtraction);
+	// round all numbers and display the sum (iteration start at the first element of the array, so the initial value of the total is specified as a second argument in a reduce() method, which is 0 in our case )
+	const numbers2 = [15.5, 2.3, 1.1, 4.7];
+	let resultSum = numbers2.reduce(sum, 0);
+	function sum(total, num) {
+		return total + Math.round(num);
+	}
+	console.log(resultSum);
+	// searching max. value in  an array
+	const numbers3 = [18, 39, 27, 18, 493, 84, 3948, 48, 1];
+	let maxValue = numbers3.reduce(searchMax, -Infinity);
+	function searchMax(accumulator, value) {
+		if (accumulator > value) {
+			return accumulator;
+		} else return value;
+	}
+	console.log(maxValue);
+}
+reduce();
