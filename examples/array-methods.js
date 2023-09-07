@@ -415,7 +415,7 @@ function map() {
 }
 
 // 23 pop() method removes (pops) the last element of an array
-// it changes the original array
+// it overwrites the original array
 // it returns the removed element
 // returned value - a string , a number, an array or any other type in an array
 function pop() {
@@ -439,7 +439,7 @@ function prototype() {
 }
 
 // 25 push() method ads new items to the end of an array
-// it changes the original array
+// it overwrites the original array
 // it changes the length of an array
 // it returns the new length
 function push() {
@@ -515,4 +515,26 @@ function reduce() {
 	console.log(total);
 }
 
-reduce();
+// 27 reduceRight() method works in the same way as reduce() method
+// the only difference is the direction of the execution
+// reduceRight() method starts the execution from the last element of an array
+
+// 28 reverse() method reverses the order of the elements in an array
+// it overwrites the original array
+function reverse() {
+	const fruits = ["Banana", "Orange", "Apple", "Mango"];
+	fruits.reverse();
+	console.log(fruits);
+	const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+	numbers.reverse();
+	console.log(numbers);
+	// creating the reversed copy of an array
+	const numbers2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+	const reversedNumbers = numbers2.concat().reverse();
+	console.log(reversedNumbers);
+	// reversing a string
+	let str = "Coding is fun!";
+	const reversedStr = str.split("").reverse().join("");
+	console.log(reversedStr);
+}
+reverse();

@@ -4,11 +4,6 @@
 			"path": "array-methods.js",
 			"bookmarks": [
 				{
-					"line": 0,
-					"column": 0,
-					"label": ""
-				},
-				{
 					"line": 13,
 					"column": 8,
 					"label": ""
@@ -130,6 +125,16 @@
 				},
 				{
 					"line": 455,
+					"column": 0,
+					"label": ""
+				},
+				{
+					"line": 517,
+					"column": 5,
+					"label": ""
+				},
+				{
+					"line": 521,
 					"column": 0,
 					"label": ""
 				}
