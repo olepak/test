@@ -490,5 +490,29 @@ function reduce() {
 		} else return value;
 	}
 	console.log(maxValue);
+	// work with objects. the total price of all products
+	const store = [
+		{
+			product: "laptop",
+			value: 1000,
+			count: 3,
+		},
+		{
+			product: "desktop",
+			value: 1500,
+			count: 4,
+		},
+		{
+			product: "mobile",
+			value: 500,
+			count: 10,
+		},
+	];
+	const total = store.reduce(totalCost, 0);
+	function totalCost(total, item) {
+		return total + item.value * item.count;
+	}
+	console.log(total);
 }
+
 reduce();
