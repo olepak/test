@@ -537,4 +537,34 @@ function reverse() {
 	const reversedStr = str.split("").reverse().join("");
 	console.log(reversedStr);
 }
-reverse();
+
+// 29 shift() method removes the first element of an array
+// it overwrites the original array
+// it returns the shifted element
+function shift() {
+	const fruits = ["Banana", "Orange", "Apple", "Mango"];
+	console.log(fruits.shift());
+	console.log(fruits);
+}
+
+// 30 slice() method returns selected elements in an array, as a new array
+// it selects from a given start, up to a ( not inclusively) given end
+// it does not change the original array
+// array.slice(start, end)
+// start - optional. default is 0. Negative numbers select from the end of an array
+// end - optional. default is the last element. Negative numbers select from the end of an array
+function slice() {
+	// select elements
+	const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+	const citrus = fruits.slice(1, 3);
+	console.log(citrus);
+	// select elements using negative values
+	const myBest = fruits.slice(-3, -1);
+	console.log(myBest);
+}
+
+// 31 some (method) checks if any element pass a test (provided as a callback function)
+// it executes the callback function once for each array element
+// it returns true ( and stops) if the function returns true for one of the array element
+// it returns false if the function returns false for all of the array elements
+// it does not change the original array
