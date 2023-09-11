@@ -89,7 +89,6 @@ function entries() {
 	console.log(
 		"Here is the iteration over key/value pair after entries() method being applied"
 	);
-
 	const f = fruits.entries();
 	for (let x of f) {
 		console.log(x);
@@ -102,7 +101,6 @@ function entries() {
 // every() method does not execute the function for empty elements
 // every() method does not change the original array
 // return value is Boolean. true if all elements pass the test, otherwise false
-
 // check if all values in ages[] are over 18:
 function every() {
 	const ages = [32, 33, 30, 19];
@@ -239,7 +237,6 @@ function forEach() {
 	let sum = 0;
 	const numbers = [33, 93, 94, 93];
 	console.log(numbers);
-
 	function sumItems(item) {
 		sum += item;
 	}
@@ -252,6 +249,7 @@ function forEach() {
 	numbers.forEach(multiplyItems);
 	console.log(numbers);
 }
+
 // 14 from() method returns an array from any object with a length property
 // from() method returns an array from any iterable object
 // Array.from is a static property of the JavaScript Array object.
