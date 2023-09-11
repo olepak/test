@@ -568,3 +568,29 @@ function slice() {
 // it returns true ( and stops) if the function returns true for one of the array element
 // it returns false if the function returns false for all of the array elements
 // it does not change the original array
+// return value - boolean. true - if any of the array elements pass the test, otherwise false
+function some() {
+	// check if any value are over 18
+	const ages = [3, 18, 10, 20];
+	console.log(ages.some((age) => age > 18));
+	// check if a person is in the list
+	const persons = [
+		{
+			personName: "Florin",
+			age: 25,
+		},
+		{
+			personName: "Liam",
+			age: 16,
+		},
+		{
+			personName: "John",
+			age: 32,
+		},
+	];
+	function isAdult(person) {
+		return person.age > 18;
+	}
+	console.log(persons.some(isAdult));
+}
+some();
