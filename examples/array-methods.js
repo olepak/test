@@ -125,7 +125,7 @@ function fill() {
 	console.log(fruits);
 	// fill the last two elements
 	const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
-	fruits2.fill("Kiwi", 2, 6);
+	fruits2.fill("Kiwi", 2, 4);
 	console.log(fruits2);
 	// it always returns changed (filled) array
 	const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -563,7 +563,6 @@ function slice() {
 	// can be used to copy the array
 	console.log(fruits2);
 }
-slice();
 
 // 31 some (method) checks if any element pass a test (provided as a callback function)
 // it executes the callback function once for each array element
@@ -651,6 +650,7 @@ function sortObjects() {
 
 // splice() method adds and/or removes array elements
 // it overwrites the original array
+// it returns an array of removed elements (if any)
 // array.splice (index, howmany, item1, ...., itemX)
 // index - required. the position to add/remove items. Negative values defines the position from the end of the array.
 // howmany - optional. Number of items to be removed
@@ -664,4 +664,31 @@ function splice() {
 	const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
 	fruits2.splice(2, 2);
 	console.log(fruits2);
+	// remove numbers from an array and returns deleted items
+	const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+	let returned = numbers.splice(2, 4);
+	console.log(numbers);
+	console.log(returned);
 }
+
+// toString() method returns a string with array values separated by commas
+// it does not change the original array
+// the toString() method is used internally by JavaScript when an object needs to be displayed as a text (as in HTML) or when an object needs to be used as a string
+// normally it is not used in the code
+function toString() {
+	// convert an array to a string:
+	const fruits = ["Banana", "Orange", "Apple", "Mango"];
+	console.log(fruits);
+	console.log(fruits.toString());
+}
+
+// unshift() method adds new elements to the beginning of an array
+// it overwrites the original array
+// return value - the new length of an array
+function unshift() {
+	const fruits = ["Banana", "Orange", "Apple", "Mango"];
+	let newLength = fruits.unshift("Lemon", "Orange");
+	console.log(newLength);
+	console.log(fruits);
+}
+unshift();

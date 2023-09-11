@@ -154,18 +154,23 @@
 					"label": ""
 				},
 				{
-					"line": 567,
+					"line": 566,
 					"column": 0,
 					"label": ""
 				},
 				{
-					"line": 598,
+					"line": 597,
 					"column": 8,
 					"label": ""
 				},
 				{
-					"line": 651,
+					"line": 650,
 					"column": 0,
+					"label": ""
+				},
+				{
+					"line": 673,
+					"column": 28,
 					"label": ""
 				}
 			]
