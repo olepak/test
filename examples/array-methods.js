@@ -559,7 +559,11 @@ function slice() {
 	// select elements using negative values
 	const myBest = fruits.slice(-3, -1);
 	console.log(myBest);
+	const fruits2 = fruits.slice();
+	// can be used to copy the array
+	console.log(fruits2);
 }
+slice();
 
 // 31 some (method) checks if any element pass a test (provided as a callback function)
 // it executes the callback function once for each array element
@@ -643,4 +647,21 @@ function sortObjects() {
 	];
 	products.sort((a, b) => b.price - a.price);
 	console.log(products);
+}
+
+// splice() method adds and/or removes array elements
+// it overwrites the original array
+// array.splice (index, howmany, item1, ...., itemX)
+// index - required. the position to add/remove items. Negative values defines the position from the end of the array.
+// howmany - optional. Number of items to be removed
+// item1, ..., itemX - optional. New elements to be added
+function splice() {
+	// at position 2, add 2 elements
+	const fruits = ["Banana", "Orange", "Apple", "Mango"];
+	fruits.splice(2, 0, "Kiwi", "Lemon");
+	console.log(fruits);
+	// at position 2 removes two elements
+	const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+	fruits2.splice(2, 2);
+	console.log(fruits2);
 }
