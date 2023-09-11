@@ -591,4 +591,56 @@ function some() {
 	}
 	console.log(persons.some(isAdult));
 }
-some();
+
+// 32 sort() sorts the elements of an array
+// it overwrites the original array
+// it sorts the elements as strings in alphabetical and ascending order
+// return value - the array with items sorted
+function sort() {
+	// sort array
+	const fruits = ["Banana", "Orange", "Apple", "Mango"];
+	console.log(fruits.sort());
+	// sort and then reverse the order
+	const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+	console.log(fruits2.sort().reverse());
+}
+// sorting numbers can produce incorrect results - "25" is bigger than "100", because "2" is bigger than "1"
+// it can be fixed by providing a compare function
+// array.sort(compareFunction)
+// compareFunction - optional. a function that defines a sort order.
+// the function should return a negative, zero, or positive function, depending on the arguments:
+// function(a, b){return a - b}
+// when sort() compare two values, it sends the values to the compare function, and sorts the values according to the returned (negative, zero, positive) value
+function sortCompare() {
+	// sort number in ascending order
+	const points = [40, 100, 1, 5, 25, 10];
+	points.sort((a, b) => a - b);
+	console.log(points);
+	// sort number in descending  order
+	const points2 = [40, 100, 1, 5, 25, 10];
+	points2.sort((a, b) => b - a);
+	console.log(points2);
+	// find the lowest value
+	console.log(points[0]);
+	// find the highest value
+	console.log(points[points.length - 1]);
+}
+// sort objects
+function sortObjects() {
+	const products = [
+		{
+			name: "Laptop",
+			price: 1000,
+		},
+		{
+			name: "desktop",
+			price: 1500,
+		},
+		{
+			name: "phone",
+			price: 500,
+		},
+	];
+	products.sort((a, b) => b.price - a.price);
+	console.log(products);
+}
