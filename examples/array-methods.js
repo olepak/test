@@ -1,4 +1,4 @@
-// 1 at() returns an indexed element from an array
+//  at() returns an indexed element from an array
 function at() {
 	const fruits = ["Banana", "Orange", "Apple", "Mango"];
 	let index = 2;
@@ -11,7 +11,7 @@ function at() {
 	console.log(fruit3);
 }
 
-// 2 concat() joins two or more arrays and returns new joined array
+//  concat() joins two or more arrays and returns new joined array
 function concat() {
 	// 1 merges two or more arrays
 	const fruits = ["Banana", "Orange", "Apple", "Mango"];
@@ -40,14 +40,14 @@ function concat() {
 	console.log(`6 - Creates copy of an array if no argument provided: ${arr8}`);
 }
 
-// 3 constructor property returns the function that crated the Array prototype
+//  constructor property returns the function that crated the Array prototype
 function constructor() {
 	const fruits = ["Banana", "Orange", "Apple", "Mango"];
 	let text = fruits.constructor;
 	console.log(text);
 }
 
-// 4 copyWithin() copies array elements to another position in the array,
+//  copyWithin() copies array elements to another position in the array,
 // overwrites the existing values (does not add items to the array), and returns the changed array
 // syntax: array.copyWithin (target, start, end)
 // target - required. The index position to copy the elements to.
@@ -80,7 +80,7 @@ function copyWithin() {
 	console.log(myArray === myArray2);
 }
 
-// 5 entries() method returns an Array iterator object with key/value pairs
+//  entries() method returns an Array iterator object with key/value pairs
 // entries () method does not change the original array
 function entries() {
 	const fruits = ["Banana", "Orange", "Apple", "Mango"];
@@ -95,7 +95,7 @@ function entries() {
 	}
 }
 
-// 6 every() method executes function for each array element
+//  every() method executes function for each array element
 // every() method returns true if the function returns true for all elements
 // every() returns false if the function returns false for one element
 // every() method does not execute the function for empty elements
@@ -111,7 +111,7 @@ function every() {
 	console.log(res);
 }
 
-// 7 fill() method fills specified elements in an array with a value
+//  fill() method fills specified elements in an array with a value
 // fill() method overwrites the original array
 // start and end position can be specified. If not , all elements will be filled
 // syntax: array.fill (value, start, end)
@@ -141,7 +141,7 @@ function fill() {
 	console.log(fillNumbers(10));
 }
 
-// 8 filter() method creates a new array filled with elements that pass a test provided by a function
+//  filter() method creates a new array filled with elements that pass a test provided by a function
 // the filter() method does not execute the function for empty elements
 // the filter() method does not change the original array
 function filter() {
@@ -162,7 +162,7 @@ function filter2() {
 	console.log(nums);
 }
 
-// 9 find() method returns the value  of the first element that passes the test
+//  find() method returns the value  of the first element that passes the test
 // find() method executes a function for each array element
 // find() method returns undefined if no elements are found
 // find() method does not change the original array
@@ -176,7 +176,7 @@ function find() {
 	);
 }
 
-// 10 findIndex() method executes a function for each array element
+//  findIndex() method executes a function for each array element
 // findIndex() method returns the index(position) of the first element that passes the test
 // findIndex() returns -1 if no match is found
 // findIndex() does not change the original array
@@ -190,7 +190,7 @@ function findIndex() {
 	);
 }
 
-// 11 flat() method concatenates sub-array elements
+// flat() method concatenates sub-array elements
 // flat() method does not change the original array
 // syntax array.flat(depth)
 // depth - optional, how deep a nested array should be flattened.Default is 1.
@@ -208,7 +208,7 @@ function flat() {
 	console.log(myArr3.flat(Infinity));
 }
 
-// 12 flatMap() method maps all array elements and creates a new flat array only with depth of 1
+// flatMap() method maps all array elements and creates a new flat array only with depth of 1
 // flatMap() creates a new array from calling a function for every array element
 // flatMap() does not change the original array
 function flatMap() {
@@ -230,7 +230,7 @@ function flatMap() {
 	console.log(result);
 }
 
-// 13 forEach() method calls a function for each element in an array
+// forEach() method calls a function for each element in an array
 // return value - undefined
 function forEach() {
 	// compute the sum
@@ -250,7 +250,7 @@ function forEach() {
 	console.log(numbers);
 }
 
-// 14 from() method returns an array from any object with a length property
+// from() method returns an array from any object with a length property
 // from() method returns an array from any iterable object
 // Array.from is a static property of the JavaScript Array object.
 // it can be only used as Array.from().
@@ -272,7 +272,7 @@ function from() {
 	console.log(res);
 }
 
-// 15 includes() method returns true if an array contains a specified value.
+// includes() method returns true if an array contains a specified value.
 // includes() method returns false if the value is not found
 // includes method is case sensitive
 // syntax array.includes(element, start)
@@ -285,7 +285,7 @@ function includes() {
 	console.log(fruits.includes("Mango", 4));
 }
 
-// 16 indexOf() method returns the first index(position) of a specified value
+// indexOf() method returns the first index(position) of a specified value
 // it returns -1 in the value is not found
 // indexOf() method starts at a specified index and searches from left to right
 // By default the search starts at the first element and ends at the last
@@ -304,7 +304,7 @@ function indexOf() {
 	console.log(index3);
 }
 
-// 17 isArray() method returns true if an object is an array, otherwise false
+// isArray() method returns true if an object is an array, otherwise false
 //  it can only be used as Array.isArray().
 // Using x.isArray(), where x is an array will return false
 // return value - boolean
@@ -317,7 +317,7 @@ function isArray() {
 	console.log(Array.isArray(text));
 }
 
-// 18 join() method returns an array as a string
+// join() method returns an array as a string
 // join() method does not change the original array
 // any separator can be specified. Default is comma
 function join() {
@@ -328,7 +328,7 @@ function join() {
 	let text2 = fruits.join(", and ");
 }
 
-// 19 keys() method returns an Array iterator object with the keys of an array
+// keys() method returns an Array iterator object with the keys of an array
 // it does not change the original array
 function keys() {
 	const fruits = ["Banana", "Orange", "Apple", "Mango"];
@@ -342,7 +342,7 @@ function keys() {
 	console.log(typeof keys2);
 }
 
-// 20 lastIndexOf() method returns the last index(position) of a specified value
+// lastIndexOf() method returns the last index(position) of a specified value
 // it returns -1 if the value is not found
 // it starts at specified index and searches for right to left
 // negative start values counts from the last element (but still searches from right to left)
@@ -380,14 +380,14 @@ function lastIndexOf() {
 	console.log(index4);
 }
 
-// 21 length property sets or returns the number of elements in an array
+// length property sets or returns the number of elements in an array
 function length() {
 	const fruits = ["Banana", "Orange", "Apple", "Mango"];
 	let length = fruits.length;
 	console.log(length);
 }
 
-// 22 map() creates a new array from calling a function for every array element
+// map() creates a new array from calling a function for every array element
 // it does not execute the function for empty elements
 // it does not change the original array
 // array.map(function(currentValue, index, arr), thisValue)
@@ -412,7 +412,7 @@ function map() {
 	console.log(strNumbers);
 }
 
-// 23 pop() method removes (pops) the last element of an array
+// pop() method removes (pops) the last element of an array
 // it overwrites the original array
 // it returns the removed element
 // returned value - a string , a number, an array or any other type in an array
@@ -423,7 +423,7 @@ function pop() {
 	console.log(fruits);
 }
 
-// 24 prototype allows to add new properties and methods to arrays
+// prototype allows to add new properties and methods to arrays
 function prototype() {
 	Array.prototype.myUcase = function () {
 		for (let i = 0; i < this.length; i++) {
@@ -436,7 +436,7 @@ function prototype() {
 	console.log(fruits);
 }
 
-// 25 push() method ads new items to the end of an array
+// push() method ads new items to the end of an array
 // it overwrites the original array
 // it changes the length of an array
 // it returns the new length
@@ -451,7 +451,7 @@ function push() {
 	console.log(length);
 }
 
-// 26 reduce () method executes the reducer function for an array element.
+// reduce () method executes the reducer function for an array element.
 // it "compresses" the array into some single value which is obtain by applying some function
 // it returns a single value - the functions' accumulated result.
 // it does not change the original array
@@ -513,11 +513,11 @@ function reduce() {
 	console.log(total);
 }
 
-// 27 reduceRight() method works in the same way as reduce() method
+// reduceRight() method works in the same way as reduce() method
 // the only difference is the direction of the execution
 // reduceRight() method starts the execution from the last element of an array
 
-// 28 reverse() method reverses the order of the elements in an array
+// reverse() method reverses the order of the elements in an array
 // it overwrites the original array
 function reverse() {
 	const fruits = ["Banana", "Orange", "Apple", "Mango"];
@@ -536,7 +536,7 @@ function reverse() {
 	console.log(reversedStr);
 }
 
-// 29 shift() method removes the first element of an array
+// shift() method removes the first element of an array
 // it overwrites the original array
 // it returns the shifted element
 function shift() {
@@ -545,7 +545,7 @@ function shift() {
 	console.log(fruits);
 }
 
-// 30 slice() method returns selected elements in an array, as a new array
+// slice() method returns selected elements in an array, as a new array
 // it selects from a given start, up to a ( not inclusively) given end
 // it does not change the original array
 // array.slice(start, end)
@@ -564,7 +564,7 @@ function slice() {
 	console.log(fruits2);
 }
 
-// 31 some (method) checks if any element pass a test (provided as a callback function)
+// some (method) checks if any element pass a test (provided as a callback function)
 // it executes the callback function once for each array element
 // it returns true ( and stops) if the function returns true for one of the array element
 // it returns false if the function returns false for all of the array elements
@@ -595,7 +595,7 @@ function some() {
 	console.log(persons.some(isAdult));
 }
 
-// 32 sort() sorts the elements of an array
+// sort() sorts the elements of an array
 // it overwrites the original array
 // it sorts the elements as strings in alphabetical and ascending order
 // return value - the array with items sorted
