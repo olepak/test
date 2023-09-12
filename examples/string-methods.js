@@ -34,7 +34,7 @@ function charAt() {
 // index - Optional. Position of a character. default is 0
 function charCodeAt() {
 	// get the Unicode of the first character in a string
-	let text = "Hello world";
+	let text = "Hello word";
 	let code = text.charCodeAt(0);
 	console.log(code);
 	// get the unicode of the 15th character (shows NaN)
@@ -42,4 +42,21 @@ function charCodeAt() {
 	let code2 = text2.charCodeAt(15);
 	console.log(code2);
 }
-charCodeAt();
+
+// codePointAt() returns the Unicode value at an index(position) in a string
+// generally the same as charCodeAt() method except two differences:
+// 1- can return the full value of a Unicode value greater than 0xFFFF (65536)
+// 2 - returned undefined if the index is invalid
+function codePointAt() {
+	// get code point value at the first position in a string
+	let text = "Hello world";
+	let code = text.codePointAt(0);
+	console.log(code);
+	// get the code point value at the last position
+	let code2 = text.codePointAt(text.length - 1);
+	console.log(code2);
+	// get the code point value at the 15th position
+	let code3 = text.codePointAt(15);
+	console.log(code3);
+}
+codePointAt();
