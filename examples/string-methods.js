@@ -11,4 +11,18 @@ function at() {
 	let char2 = text[3];
 	console.log(char2);
 }
-at();
+
+// charAt method returns the character at a specified index(position) in a string
+// string.charAt(index)
+// index - optional. default = 0
+// return value - the character at a specified position. empty string ("") if the index is out of range
+function charAt() {
+	// get the second character of a string
+	let text = "Hello World";
+	let letter = text.charAt(1);
+	console.log(letter);
+	// get the last character in a string
+	let letter1 = text.charAt(text.length - 1);
+	console.log(letter1);
+}
+charAt();
