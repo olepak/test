@@ -59,4 +59,26 @@ function codePointAt() {
 	let code3 = text.codePointAt(15);
 	console.log(code3);
 }
-codePointAt();
+
+// concat() method joins two or more strings
+// it does not change the existing string
+// it returns a new string
+//string.concat(string1, string2,...., stringX)
+// string1 - required
+// string2, ..., stringX - the strings to be joined
+// it is strongly recommended to use assignment operator (+, +=) instead of the concat() method, because it is way faster
+function concat() {
+	// join two strings
+	let text1 = "sea";
+	let text2 = "food";
+	let result = text1.concat(text2);
+	console.log(result);
+	// join two strings
+	let text3 = "Hello";
+	let text4 = "World!";
+	console.log(text3.concat(" ", text4));
+	// join three strings
+	let text5 = "Have a nice day!";
+	console.log(text3.concat(" ", text4, " ", text5));
+}
+concat();
