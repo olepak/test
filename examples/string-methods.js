@@ -25,4 +25,21 @@ function charAt() {
 	let letter1 = text.charAt(text.length - 1);
 	console.log(letter1);
 }
-charAt();
+
+// charCodeAt() method returns the Unicode of the character
+// charCodeAt() is UTF-16 and returns values only between 0 and 65535
+// the index of the last character is string length -1
+// return value - unicode value of the character. NaN if the index is invalid
+// string.charCodeAt(index)
+// index - Optional. Position of a character. default is 0
+function charCodeAt() {
+	// get the Unicode of the first character in a string
+	let text = "Hello world";
+	let code = text.charCodeAt(0);
+	console.log(code);
+	// get the unicode of the 15th character (shows NaN)
+	let text2 = "Hello world";
+	let code2 = text2.charCodeAt(15);
+	console.log(code2);
+}
+charCodeAt();
