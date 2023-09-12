@@ -385,6 +385,11 @@ function length() {
 	const fruits = ["Banana", "Orange", "Apple", "Mango"];
 	let length = fruits.length;
 	console.log(length);
+	// setting the length of an array
+	fruits.length = 1;
+	console.log(fruits);
+	fruits.length = 0;
+	console.log(fruits);
 }
 
 // map() creates a new array from calling a function for every array element
@@ -692,3 +697,16 @@ function unshift() {
 	console.log(fruits);
 }
 unshift();
+
+// valueOf() method returns the array itself
+// it does not change the original array
+//fruits.valueOf() returns the same as fruits
+function valueOf() {
+	// get the value of fruits
+	const fruits = ["Banana", "Orange", "Apple", "Mango"];
+	const myArray = fruits.valueOf();
+	console.log(myArray);
+	// fruits.valueOf() return the same as fruits
+	const myArray2 = fruits;
+	console.log(myArray2);
+}
