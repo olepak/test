@@ -80,5 +80,15 @@ function concat() {
 	// join three strings
 	let text5 = "Have a nice day!";
 	console.log(text3.concat(" ", text4, " ", text5));
+	// it is strongly recommended to use assignment operator (+, +=) instead of the concat() method, because it is way faster
+	let result3 = text1 + text2;
+	console.log(result3);
 }
-concat();
+
+// constructor property returns the function that created the String prototype
+function constructor() {
+	let text = "Hello world";
+	let message = text.constructor;
+	console.log(message);
+}
+constructor();
