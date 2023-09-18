@@ -167,6 +167,36 @@ function indexOf() {
 	// search a string for "Welcome"
 	let result2 = text.indexOf("Welcome");
 	console.log(result2);
-	// find the
+	// find the first occurrence of "o"
+	console.log(text.indexOf("o"));
+	// find the first occurrence of "e", starting at position 5
+	console.log(text.indexOf("e", 5));
+	// negative start value is always considered as 0
+	console.log(text.indexOf("world", -5));
+	// empty string as a searchvalue always returns 0
+	console.log(text.indexOf(""));
 }
-indexOf();
+
+// lastIndexOf() method returns the position of the last occurrence in a string
+// starting position by default +Infinity
+// it searches from right to left
+function lastIndexOf() {
+	let text = "Hello world, welcome to the universe.";
+	console.log(text.lastIndexOf("e"));
+	// searching from the position 23
+	let s = "The code undefined code code !";
+	console.log(s.lastIndexOf("code", 23));
+	// negative start value is always considered as 0 and therefore returns -1
+	console.log(s.lastIndexOf(-5));
+	// empty string as a searchvalue always returns string length
+	console.log(s.length);
+	console.log(s.lastIndexOf(""));
+}
+
+// length() property returns the length of a string
+// the length property of an empty string is 0
+function length() {
+	let text = "Hello world";
+	console.log(text.length);
+}
+length();
