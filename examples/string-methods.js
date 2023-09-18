@@ -32,6 +32,7 @@ function charAt() {
 // return value - unicode value of the character. NaN if the index is invalid
 // string.charCodeAt(index)
 // index - Optional. Position of a character. default is 0
+// https://www.youtube.com/watch?v=x16Z_U1tGrc&t=3472s
 function charCodeAt() {
 	// get the Unicode of the first character in a string
 	let text = "Hello word";
@@ -47,6 +48,7 @@ function charCodeAt() {
 // generally the same as charCodeAt() method except two differences:
 // 1- can return the full value of a Unicode value greater than 0xFFFF (65536)
 // 2 - returned undefined if the index is invalid
+// https://www.youtube.com/watch?v=x16Z_U1tGrc&t=3472s
 function codePointAt() {
 	// get code point value at the first position in a string
 	let text = "Hello world";
@@ -107,4 +109,29 @@ function endsWith() {
 	let text2 = "Hello world, welcome to the universe.";
 	console.log(text2.endsWith("world", 11));
 }
-endsWith();
+
+// String.fromCharCode() method converts Unicode values to characters
+// it is a static method of the String object
+// the syntax is always String.fromCharCode()
+// you cannot use myString.fromCharCode()
+// there is a String.fromCodePoint() method.
+// Explanation of both methods https://youtu.be/x16Z_U1tGrc?t=3906
+function fromCharCode() {
+	// convert Unicode values to characters
+	let char = String.fromCharCode(65);
+	console.log(char);
+	let text = String.fromCharCode(72, 69, 76, 79);
+	console.log(text);
+	// difference between fromCharCode and fromCodePoint is that fromCodePoint() method can take the full value of a Unicode value greater than 0xFFFF (65536)
+	// fromCharCode() method cannot take values greater than 65535. it results in a broken character
+	let char1 = String.fromCharCode(128007);
+	console.log(char1); // broken value
+	// fromCodePoint() method can take the full value of a Unicode value greater than 0xFFFF (65536)
+	let char2 = String.fromCodePoint(128077);
+	console.log(char2);
+	// fromCharCode() method cannot take values greater than 65536
+	let char3 = String.fromCharCode(79, 107, 32, 55357, 56397);
+	console.log(char3);
+	let char4 = String.fromCodePoint(79, 107, 32, 128077);
+	console.log(char4);
+}
