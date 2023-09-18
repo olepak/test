@@ -91,4 +91,20 @@ function constructor() {
 	let message = text.constructor;
 	console.log(message);
 }
-constructor();
+
+// endsWith() method returns true if a string ends with a specified string.
+// otherwise it returns false
+// it is case sensitive
+// return value - boolean
+// string.endsWith(searchvalue, length)
+// searchvalue - required. the string to search for
+// length - optional. the length of the string to search. default - string length
+function endsWith() {
+	let text = "Hello world";
+	console.log(text.endsWith("world"));
+	console.log(text.endsWith("World"));
+	// check if the first 11  characters of a string ends with "world"
+	let text2 = "Hello world, welcome to the universe.";
+	console.log(text2.endsWith("world", 11));
+}
+endsWith();
