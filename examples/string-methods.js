@@ -135,3 +135,38 @@ function fromCharCode() {
 	let char4 = String.fromCodePoint(79, 107, 32, 128077);
 	console.log(char4);
 }
+
+// includes() method returns true if a string contains a specified string.
+// otherwise it returns false
+// it is case sensitive
+// string.includes (searchvalue, start)
+// searchvalue - required. the string to search for
+// start - optional. the position to start from. default value - 0
+// return value - boolean
+function includes() {
+	// check if a string includes "world"
+	let text = "Hello world, welcome to the universe.";
+	console.log(text.includes("world"));
+	// start at position 12
+	let text2 = "Hello world, welcome to the universe.";
+	console.log(text2.includes("world", 12));
+}
+
+// indexOf() method returns the position of the first occurrence in a string
+// it returns -1 i the value was not found
+// it is case sensitive
+// string.indexOf(searchvalue, start)
+// searchvalue - required. the string to search for
+// start - optional. the position to start from
+// return value - a number, the first position where the value occurs, -1 if it never occurs
+function indexOf() {
+	// search a string for welcome
+	let text = "Hello world, welcome to the universe.";
+	let result = text.indexOf("welcome");
+	console.log(result);
+	// search a string for "Welcome"
+	let result2 = text.indexOf("Welcome");
+	console.log(result2);
+	// find the
+}
+indexOf();
