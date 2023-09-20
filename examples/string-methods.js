@@ -187,6 +187,7 @@ function lastIndexOf() {
 	let s = "The code undefined code code !";
 	console.log(s.lastIndexOf("code", 23));
 	// negative start value is always considered as 0 and therefore returns -1
+	// https://youtu.be/x16Z_U1tGrc?t=350
 	console.log(s.lastIndexOf(-5));
 	// empty string as a searchvalue always returns string length
 	console.log(s.length);
@@ -199,4 +200,17 @@ function length() {
 	let text = "Hello world";
 	console.log(text.length);
 }
-length();
+
+// localeCompare() method compares two strings in the current locale.
+// it returns sort order -1, 1, or 0 ( for before, after, or equal).
+// the current locale is based on the language settings of the browser
+// string.localeCompare(compareString, locales)
+// compareString - the string to compare with
+// locales - optional. indicates the language setting of a browser ("uk", "de", "ua" etc.)
+function localeCompare() {
+	// compare "ab" with "cd"
+	let text1 = "ab";
+	let text2 = "cd";
+	let result = text1.localeCompare(text2);
+	console.log(result);
+}
