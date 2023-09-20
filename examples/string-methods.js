@@ -214,3 +214,56 @@ function localeCompare() {
 	let result = text1.localeCompare(text2);
 	console.log(result);
 }
+
+// match() method matches a string against a regular expression
+// if the search value is a string it is converted to a regular expression
+// it returns an array of matches
+// it returns null if no match is found
+// string.match(match)
+// match - required. the search value. a regular expression ( or a string thar will be converted to a regular expression)
+function match() {
+	let text = "The rain in SPAIN stays mainly in the plain";
+	let result = text.match("ain");
+	console.log(result);
+	// global search for ain
+	console.log(text.match(/ain/g));
+	// a global case-insensitive search
+	console.log(text.match(/ain/gi));
+	// match is not found
+	console.log(text.match(/w/));
+}
+
+// padEnd() method pads a string at the end
+// it pads a string with another string  multiple times until it reaches a given length
+// it is a string method. to pad a number, convert the number to a string first
+// it creates a new string
+//string.padEnd(length, string)
+// length - required. the length of the resulting string
+// string - optional. the string to pad with. default is space
+// return value - a string of the specified length.
+function padEnd() {
+	let text = "5";
+	let padded = text.padEnd(4, "0");
+	console.log(padded);
+	let padded2 = text.padEnd(4, "x");
+	console.log(padded2);
+	// to pad a number, convert the number to a string first
+	let numb = 5;
+	let text2 = numb.toString();
+	let padded3 = text2.padEnd(4, "v");
+	console.log(padded3);
+	// it pads a string with multiple times until it reaches a given length and truncates it when the specified length is reached
+	let string = "abc";
+	let paddedString = string.padEnd(10, "foo");
+	console.log(paddedString);
+}
+padEnd();
+
+// padStart() method is the same as padEnd() method.
+// the only difference - it pads a string at the start
+function padStart() {
+	let text = "5";
+	let padded = text.padStart(4, "0");
+	console.log(padded);
+}
+padStart();
