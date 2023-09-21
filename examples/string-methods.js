@@ -257,7 +257,6 @@ function padEnd() {
 	let paddedString = string.padEnd(10, "foo");
 	console.log(paddedString);
 }
-padEnd();
 
 // padStart() method is the same as padEnd() method.
 // the only difference - it pads a string at the start
@@ -266,4 +265,44 @@ function padStart() {
 	let padded = text.padStart(4, "0");
 	console.log(padded);
 }
-padStart();
+
+// prototype is a property available with all JavaScript objects.
+// it allows to add new properties and methods to strings
+
+// repeat() method returns a string with a number of copies of a string
+// it returns a new string
+// it does not change the original string
+// string.repeat(count)
+//count - required. the number of copies
+function repeat() {
+	let text = "Hello world";
+	let result = text.repeat(4);
+	console.log(result);
+}
+
+// replace() method searches a string for a value or a regular expression
+// it returns a new string with the values replaced
+// it does not change the original array
+// if you replace a value, only the first value will be replaced. to replace all instances use a regular expression with the g modifier
+// string.replace(searchValue, newValue(or function))
+// searchValue - required. the value, or regular expression, to search for
+// newValue - required. the new value(to replace with)
+function replace() {
+	//replace Microsoft
+	let text = "Visit Microsoft!";
+	let result = text.replace("Microsoft", "W3School");
+	console.log(result);
+	// a global replacement
+	let text2 = "Mr Blue has a blue house and a blue car";
+	let result2 = text2.replace(/blue/g, "red");
+	console.log(result2);
+	// a global, case-insensitive replacement
+	let result3 = text2.replace(/blue/gi, "red");
+	console.log(result3);
+	// a function to return the replacement text
+	let result4 = text2.replace(/blue|house|car/gi, (match) => {
+		return match.toUpperCase();
+	});
+	console.log(result4);
+}
+replace();
