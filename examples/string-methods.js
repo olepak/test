@@ -303,6 +303,21 @@ function replace() {
 	let result4 = text2.replace(/blue|house|car/gi, (match) => {
 		return match.toUpperCase();
 	});
+
 	console.log(result4);
 }
-replace();
+
+// replaceAll() method searches a string for a value or a regular expression
+// it returns a new string with all values replaced
+// it does not change the original string
+// if the parameter is a regular expression, the global flag(g) must be set, otherwise a TypeError is thrown
+// string.replaceAll(searchValue, newValue(or function))
+// searchValue - required. the value, or regular expression, to search for
+// newValue - required. the new value(to replace with).This parameter can be a JavaScript function.
+// it was introduced in ES2021
+function replaceAll() {
+	let text = "I love cats. Cats are very easy to love. Cats are very popular";
+	let result = text.replaceAll("Cats", "Dogs");
+	console.log(result);
+}
+replaceAll();
