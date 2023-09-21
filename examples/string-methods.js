@@ -338,3 +338,29 @@ function search() {
 	let position3 = text.search(/blue/i);
 	console.log(position3);
 }
+
+// slice() method extracts a part of a string
+// it returns the extracted part in a new string
+// it does not change the original string
+// string.slice(start, end)
+// start - required. the start position
+// end - optional. the end position (up to but not including). default is string length
+// a negative number selects from the end of the string
+// difference between slice() and substring() https://youtu.be/x16Z_U1tGrc?t=1168
+function slice() {
+	// slice the first five positions
+	let text = "Hello world";
+	let result = text.slice(0, 5);
+	console.log(result);
+	// from position 3 to the end
+	let result2 = text.slice(3);
+	console.log(result2);
+	// from position 3 to 8
+	console.log(text.slice(3, 8));
+	// only the first character
+	console.log(text.slice(0, 1));
+	// only the last character
+	console.log(text.slice(-1));
+	// the whole string
+	console.log(text.slice(0));
+}
