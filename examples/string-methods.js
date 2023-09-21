@@ -320,4 +320,21 @@ function replaceAll() {
 	let result = text.replaceAll("Cats", "Dogs");
 	console.log(result);
 }
-replaceAll();
+
+// search() method matches a string against a regular expression
+// it returns the index (position) of the first match
+// it returns -1 if no match is found
+// it is case sensitive
+// string.search(searchValue)
+// searchValue - required. the search value. a regular expression, or a string that will be converted to a regular expression
+function search() {
+	let text = "Mr.Blue has a blue house";
+	let position = text.search("Blue");
+	console.log(position);
+	// search for "blue"
+	let position2 = text.search("blue");
+	console.log(position2);
+	// search case insensitive
+	let position3 = text.search(/blue/i);
+	console.log(position3);
+}
