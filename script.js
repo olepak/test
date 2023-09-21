@@ -1,7 +1,8 @@
-const numbers = [1, 2, 4, 5, 3, 2, 6, 7, 2];
-const numbers2 = [1, 6, 8, 5, 9, 3, 5, 7, 3];
-const numbers3 = numbers.concat(numbers2);
-const nums = numbers3.filter((value, index, arr) => {
-	return arr.indexOf(value) === index;
-});
-console.log(nums);
+let char = String.fromCharCode(128007);
+console.log(char);
+let char2 = String.fromCodePoint(128077);
+console.log(char2);
+let char3 = String.fromCharCode(79, 107, 32, 55357, 56397);
+console.log(char3);
+let char4 = String.fromCodePoint(79, 107, 32, 128077);
+console.log(char4);
