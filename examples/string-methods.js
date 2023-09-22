@@ -486,8 +486,40 @@ function toLocaleUpperCase() {
 	console.log(text2.toLocaleUpperCase());
 	console.log(text2.toLocaleUpperCase("tr"));
 }
-toLocaleUpperCase();
 
 // toLowerCase() and toUpperCase() methods acts the same as toLocaleLowerCase() and toLocaleUpperCase accordingly, but without taking into consideration current locale
 // they both return uppercased or lowercased  string
 // they do not change the original string
+
+//toString() and valueOf() methods return a string as a string
+// they can be used to convert a string object into a string
+// they are used internally by JavaScript when an object needs to be displayed as text (like in HTML), or when an object needs to be used as a string
+// normally,they are  not used it own code
+function toString() {
+	// get the content of the text
+	let text = "Hello world";
+	let result = text.toString();
+	console.log(result);
+	// same as
+	result = text;
+	// get the value of a String object
+	let text2 = new String("Hello world");
+	console.log(text2);
+	console.log(typeof text2);
+	let result2 = text.valueOf();
+	console.log(result2);
+	console.log(typeof result2);
+}
+
+// trim() method removes whitespace from both sides of a string
+// it does not change the original string
+function trim() {
+	let text = "        Hello world        ";
+	let result = text.trim();
+	console.log(result);
+}
+
+// trimStart() and trimEnd() methods work as trim(),but remove whitespaces only from the start or the end of a string accordingly
+
+const path = "c:\\windows\\registration\\name\\filename.js";
+console.log(path);
