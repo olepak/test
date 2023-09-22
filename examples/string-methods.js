@@ -448,4 +448,46 @@ function split() {
 	let result4 = text.split("e", 2);
 	console.log(result4);
 }
-split();
+
+// startsWith() method returns true if a string starts with a specified string
+// otherwise it returns false
+// it is case sensitive
+// string.startswith(searchValue, start)
+// searchValue - required. the string to search for
+// start - optional. start position. default is 0
+function startsWith() {
+	// start at position 0 (true)
+	let text = "Hello world, welcome to the universe.";
+	let result = text.startsWith("Hello");
+	console.log(result);
+	// starts at position 1 (false)
+	console.log(text.startsWith("Hello", 1));
+}
+
+// toLocaleLowerCase() method converts a string to lowercase letters, using current locale
+// the locale is based on the language of the browser
+// it does not change the original string
+// it returns the same result as toLowerCase(), except for locales that conflict withe the regular Unicode case mappings (such as Turkish)
+// returned value - a new string converted to lowercase according to current locale
+function toLocaleLowerCase() {
+	let text = "Hello world";
+	let result = text.toLocaleLowerCase();
+	console.log(result);
+}
+
+// toLocaleUpperCase() method converts a string to uppercase letters, using current locale
+// everything else - the same as for toLocaleLowerCase
+function toLocaleUpperCase() {
+	let text = "Hello world";
+	let result = text.toLocaleUpperCase();
+	console.log(result);
+	// example for Turkish
+	let text2 = "istanbul";
+	console.log(text2.toLocaleUpperCase());
+	console.log(text2.toLocaleUpperCase("tr"));
+}
+toLocaleUpperCase();
+
+// toLowerCase() and toUpperCase() methods acts the same as toLocaleLowerCase() and toLocaleUpperCase accordingly, but without taking into consideration current locale
+// they both return uppercased or lowercased  string
+// they do not change the original string
