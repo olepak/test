@@ -395,3 +395,15 @@ function substring() {
 	let result6 = text.substring(text.length - 1);
 	console.log(result6);
 }
+
+// difference between slice() and substring() https://youtu.be/x16Z_U1tGrc?t=943
+function differenceSlSub() {
+	// negative values are treated differently. slice() treats it as the position from the end of the string. substring() converts it to 0
+	let text = "The morning is upon us";
+	console.log(text.slice(-11));
+	console.log(text.substring(-11));
+	// if end value is greater than start value, slice() returns empty string, substring() swaps the values and returns respective substring
+	console.log(text.slice(16, 13));
+	console.log(text.substring(16, 13));
+}
+differenceSlSub();
