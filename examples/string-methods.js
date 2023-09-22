@@ -406,4 +406,46 @@ function differenceSlSub() {
 	console.log(text.slice(16, 13));
 	console.log(text.substring(16, 13));
 }
-differenceSlSub();
+
+// substr() method is a deprecated method and extracts a part of a string
+// use substring() or slice() instead
+// it begins at specified position and returns a specified number of characters
+// it does not change the original string
+// to extract characters from the end of the string use a negative start position
+// string.substr(start, length)
+// start - required. the start position if start greater than length it returns ""
+// if start is negative, it counts from the end of the string
+// length - optional. the number of characters to extract. if omitted, it extracts the end of the string
+function substr() {
+	let text = "Hello world";
+	let result = text.substr(1, 4);
+	console.log(result);
+}
+
+// split() method splits a string into an array of substrings
+// it returns the new array
+// it does not change the original string
+// if (" ") used as a separator, the string is split between words
+// string.split(separator, limit)
+// separator - optional. a string or regular expression to use for splitting
+// if omitted, an array with the original string is returned
+// limit - optional, an integer that limits the number of splits. items after the limit are excluded
+function split() {
+	// split the words
+	let text = "Hello world, welcome to the universe.";
+	let result = text.split(" ");
+	console.log(result);
+	// return the second word
+	let word = result[1];
+	console.log(word);
+	// split the characters, including spaces
+	let result2 = text.split("");
+	console.log(result2);
+	// split with "e"
+	let result3 = text.split("e");
+	console.log(result3);
+	// split with "e" two times, the rest is omitted
+	let result4 = text.split("e", 2);
+	console.log(result4);
+}
+split();
