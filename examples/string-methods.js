@@ -363,4 +363,35 @@ function slice() {
 	console.log(text.slice(-1));
 	// the whole string
 	console.log(text.slice(0));
+	//
+}
+
+// substring() method extracts characters, between two indices(positions), from a string, and returns the substring
+// it extracts characters from start to end(exclusive)
+// it returns a string containing the extracted characters
+// it does not change the original string
+// string.substring(start, end)
+// start - required. start position.
+// end - optional. end position(up to but not including). if omitted - the rest of the string
+// if start is greater than end, arguments are swapped (4, 1) = (1, 4)
+// start or end values less than 0 are treated as 0
+function substring() {
+	let text = "Hello world";
+	let result = text.substring(1, 4);
+	console.log(result);
+	// start from position 2
+	let result2 = text.substring(2);
+	console.log(result2);
+	// if start is greater than end, parameters are swapped
+	let result3 = text.substring(4, 1);
+	console.log(result3);
+	// if start is less than 0, it will start from 0
+	let result4 = text.substring(-3);
+	console.log(result4);
+	// only the first
+	let result5 = text.substring(0, 1);
+	console.log(result5);
+	// only the last
+	let result6 = text.substring(text.length - 1);
+	console.log(result6);
 }
