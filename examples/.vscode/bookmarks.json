@@ -339,6 +339,31 @@
 					"label": ""
 				}
 			]
+		},
+		{
+			"path": "argument-objects.js",
+			"bookmarks": [
+				{
+					"line": 11,
+					"column": 0,
+					"label": ""
+				},
+				{
+					"line": 23,
+					"column": 0,
+					"label": ""
+				},
+				{
+					"line": 26,
+					"column": 0,
+					"label": ""
+				},
+				{
+					"line": 33,
+					"column": 188,
+					"label": ""
+				}
+			]
 		}
 	]
 }
