@@ -38,3 +38,24 @@ function funcWithDefault(a = 55) {
 	console.log(a);
 }
 funcWithDefault(10);
+
+// updating a does not also update arguments[0]
+function funcWithDefault2(a = 55) {
+	a = 99;
+	console.log(arguments[0]);
+}
+funcWithDefault2(10);
+
+// An untracked default parameter
+function funcWithDefault3(a = 55) {
+	console.log(arguments[0]);
+	console.log(arguments.length);
+}
+funcWithDefault3();
+
+// arguments is an array-like object, which means that arguments has a length property and properties indexed from zero, but it does not have Array's built-in methods like forEach() or map(). However, it can be converted to a real Array, using one of slice(), Array.from(). or spread syntax.
+const args = Array.prototype.slice.call(arguments);
+// or
+const args2 = Array.from(arguments);
+// or
+const args3 = [...arguments];
