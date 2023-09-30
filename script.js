@@ -1,13 +1,5 @@
-function showSquaredNumbers(square, output) {
-	output(square);
+function getCount(str) {
+	let result = str.match(/[aeiou]/gi) || [];
+	console.log(result.length);
 }
-
-function squareNumbers(numbers) {
-	return numbers.reduce(function (sum, n) {
-		return sum + n * n;
-	}, 0);
-}
-function showResult(result) {
-	console.log(result);
-}
-showSquaredNumbers(squareNumbers([1, 450, 4, 5, 6]), showResult);
+getCount("my pyx");
