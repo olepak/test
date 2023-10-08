@@ -454,6 +454,7 @@ function push() {
 	console.log(fruits);
 	console.log(length);
 }
+push();
 
 // reduce () method executes the reducer function for an array element.
 // it "compresses" the array into some single value which is obtain by applying some function
