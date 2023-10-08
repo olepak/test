@@ -10,32 +10,10 @@ body {
 	display: flex;
 	padding: 30px;
 }
-.container {
-	flex: 1;
-	outline: 1px solid black; /* for debugging */
-	display: flex;
-}
 
-.item1,
-.item2 {
-	background-color: rgba(0, 100, 0, 0.1); /* for debugging */
-	margin: 20px;
-	padding: 20px;
-	display: flex;
-	flex: 1;
-}
-.item2 {
-	text-align: center;
-}
-.item2 .subitem {
-	margin-left: 50px;
-	margin-right: 50px;
-	display: flex;
-	justify-content: center;
-	background-color: lightgray;
-	align-items: center;
-}
-.subitem {
+div {
+	height: 100px;
+	width: 100px;
 	outline: 1px solid black; /* for debugging */
-	flex: 1;
+	background-color: rgba(0, 100, 0, 0.1); /* for debugging */
 }
