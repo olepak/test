@@ -36,4 +36,8 @@ document.body.insertBefore(anotherParagraph, newParagraph);
 console.log(document.body.removeChild(newParagraph)); // removes element and returns a reference to removed element to the console
 
 // ALTERING ELEMENTS
-//
+// it allows you to do many useful alterations, like adding/removing and altering attributes, changing classes, adding inline style information and more
+const div = document.createElement("div"); // creates a new div referenced in the variable "div"
+div.style.color = "blue"; // adds the indicated style rule
+div.style.cssText = "color:blue; background: white"; // adds several style rules
+div.setAttribute("style", "color:blue; background:white"); // adds several style rules
