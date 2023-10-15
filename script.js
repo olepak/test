@@ -14,4 +14,9 @@ anotherParagraph.textContent = "Hey! I am another paragraph!";
 document.body.insertBefore(anotherParagraph, newParagraph);
 
 // removes element and returns a reference to removed element to the console
-console.log(document.body.removeChild(newParagraph));
+// console.log(document.body.removeChild(newParagraph));
+anotherParagraph.style.color = "red";
+anotherParagraph.style.cssText = "color: blue; background:white";
+anotherParagraph.setAttribute("style", "color: green; background: pink");
+let anParStyle = document.querySelector(anotherParagraph).style;
+anParStyle.backgroundColor = "black";
