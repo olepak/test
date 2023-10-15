@@ -1,19 +1,17 @@
-function moreConciseCount(input) {
-	if (input === null || input.length === 0) {
-		return [];
-	}
-	return input.reduce(
-		(acc, value) => {
-			if (value > 0) {
-				acc[0] += 1;
-			} else {
-				acc[1] += value;
-			}
-			return acc;
-		},
-		[0, 0]
-	);
-}
+const parentElement = document.createElement("div");
+document.body.appendChild(parentElement);
+parentElement.textContent = "Some text";
 
-console.log(moreConciseCount([1, 2, 3, 4, 5, 6, 7, 8, 10, -11, -12, -13, -14]));
-console.log(moreConciseCount([]));
+const nestedDiv = document.createElement("p");
+parentElement.appendChild(nestedDiv);
+
+const newParagraph = document.createElement("p");
+document.body.appendChild(newParagraph);
+newParagraph.textContent = "I am here! Look at me!!!";
+
+const anotherParagraph = document.createElement("p");
+anotherParagraph.textContent = "Hey! I am another paragraph!";
+document.body.insertBefore(anotherParagraph, newParagraph);
+
+// removes element and returns a reference to removed element to the console
+console.log(document.body.removeChild(newParagraph));

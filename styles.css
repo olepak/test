@@ -17,3 +17,8 @@ div {
 	outline: 1px solid black; /* for debugging */
 	background-color: rgba(0, 100, 0, 0.1); /* for debugging */
 }
+
+p {
+	background-color: rgba(0, 100, 0, 0.1); /* for debugging */
+	outline: 1px solid black; /* for debugging */
+}

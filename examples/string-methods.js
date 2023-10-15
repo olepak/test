@@ -200,6 +200,7 @@ function length() {
 	let text = "Hello world";
 	console.log(text.length);
 }
+length();
 
 // localeCompare() method compares two strings in the current locale.
 // it returns sort order -1, 1, or 0 ( for before, after, or equal).
