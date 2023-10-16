@@ -22,3 +22,5 @@ let anParStyle = anotherParagraph.style;
 anParStyle.backgroundColor = "violet";
 anParStyle.border = "10px solid red";
 anParStyle.outline = "10px dashed green";
+console.log(anParStyle.border);
+anParStyle.outline = "";
