@@ -41,3 +41,8 @@ const div = document.createElement("div"); // creates a new div referenced in th
 div.style.color = "blue"; // adds the indicated style rule
 div.style.cssText = "color:blue; background: white"; // adds several style rules
 div.setAttribute("style", "color:blue; background:white"); // adds several style rules
+// enlightenments from https://domenlightenment.com/#6.2
+let divStyle = div.style; // or document.querySelector("div"). style if you are targeting HTML elements
+// set
+divStyle.backgroundColor = "red";
+divStyle.border = "1px solid black"; // and so on and so forth with every css property
