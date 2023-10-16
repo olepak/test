@@ -1,10 +1,4 @@
-function findShort(s) {
-	return s.split(" ").reduce((acc, value) => {
-		if (value.length < acc) {
-			acc = value.length;
-		}
-		return acc;
-	}, Infinity);
-}
-
-console.log(findShort("this one is the longest word"));
+String.prototype.toJadenCase = function () {
+	return this.split(" ").map((item) => (item[0] = 1) + item.slice(1));
+};
+console.log("here is some kind of a text".toJadenCase());
