@@ -46,3 +46,11 @@ let divStyle = div.style; // or document.querySelector("div"). style if you are 
 // set
 divStyle.backgroundColor = "red";
 divStyle.border = "1px solid black"; // and so on and so forth with every css property
+// get
+console.log(divStyle.backgroundColor); // and so on and so forth with every css property
+// remove
+divStyle.border = ""; // and so on and so forth with every css property
+// note that if you are accessing a kebab-cased rule from JS, you will either need to use camelCase or bracket notation instead of dash notation
+divStyle.background - color; // does not work
+divStyle.backgroundColor; // works
+divStyle["background-color"]; // also works
