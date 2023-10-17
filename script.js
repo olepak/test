@@ -4,6 +4,7 @@ parentElement.textContent = "Some text";
 
 const nestedDiv = document.createElement("p");
 parentElement.appendChild(nestedDiv);
+nestedDiv.textContent = "Hello, I am a nested div";
 
 const newParagraph = document.createElement("p");
 document.body.appendChild(newParagraph);
@@ -24,3 +25,5 @@ anParStyle.border = "10px solid red";
 anParStyle.outline = "10px dashed green";
 console.log(anParStyle.border);
 anParStyle.outline = "";
+anotherParagraph.classList.add("new");
+console.log(anotherParagraph.getAttribute("class"));
