@@ -54,3 +54,17 @@ divStyle.border = ""; // and so on and so forth with every css property
 divStyle.background - color; // does not work
 divStyle.backgroundColor; // works
 divStyle["background-color"]; // also works
+
+// EDITING ATTRIBUTES
+div.setAttribute("id", "theDiv"); // if id exists, update it to "theDiv", else create an id with the value "theDiv"
+div.getAttribute("id"); // returns value of specified attribute, in this case "theDiv"
+div.removeAttribute("id"); // removes specified attribute
+
+// WORKING WITH CLASSES
+div.classList.add("new"); // adds class "new" to your new div
+div.classList.remove("new"); // removes "new" class from div
+div.classList.toggle("active"); // if div does not have class "active" then add it, or if it does, then remove it
+// it is often standard and standard (and cleaner) to toggle a css style rather than adding and removing inline css.
+
+// ADDING TEXT CONTENT
+div.textContent = "Hello world"; // creates a next node containing "Hello world" and inserts it in div
