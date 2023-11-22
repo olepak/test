@@ -27,3 +27,4 @@ console.log(anParStyle.border);
 anParStyle.outline = "";
 anotherParagraph.classList.add("new");
 console.log(anotherParagraph.getAttribute("class"));
+anotherParagraph.innerHTML = "<p>Hello World!</p>";
