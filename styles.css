@@ -5,7 +5,7 @@
 }
 body {
 	width: 100vw;
-	height: 400px;
+	height: 200px;
 	outline: 1px solid black; /* for debugging */
 	display: flex;
 	padding: 30px;
