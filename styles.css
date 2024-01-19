@@ -22,3 +22,10 @@ p {
 	background-color: rgba(0, 100, 0, 0.1); /* for debugging */
 	outline: 1px solid black; /* for debugging */
 }
+.some-class {
+	font-size: 50px;
+}
+.active {
+	font-size: 100px;
+	color: green;
+}
