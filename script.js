@@ -20,3 +20,10 @@ anotherDivP.textContent = "ME TOO!";
 anotherDiv.appendChild(anotherDivH1);
 anotherDiv.appendChild(anotherDivP);
 container.appendChild(anotherDiv);
+const btn = document.querySelector("#btn");
+function alertFunction() {
+	alert("YAY! YOU DID IT!");
+}
+btn.addEventListener("click", function (e) {
+	e.target.style.background = "blue";
+});
