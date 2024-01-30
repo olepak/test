@@ -33,3 +33,7 @@ buttons.forEach((button) => {
 		alert(button.id);
 	});
 });
+console.log(document.styleSheets);
+console.log(document.nodeType);
+console.log(Node.ELEMENT_NODE);
+console.log(document.nodeType === Node.DOCUMENT_NODE);
