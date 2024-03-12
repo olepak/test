@@ -1,20 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>test</title>
-		<link rel="stylesheet" href="styles.css" />
-		<script src="script.js" defer></script>
+		<meta charset="utf-8" />
+		<title>JavaScript getElementsByName Demo</title>
 	</head>
+
 	<body>
-		<h1>THE TITLE OF YOUR WEBPAGE</h1>
-		<div id="container"></div>
-		<button onclick="alert('Hello world')">Click me</button>
-		<button id="btn">Click me2</button>
-		<button id="1">Click me</button>
-		<button id="2">Click me</button>
-		<button id="3">Click me</button>
+		<p>Please rate the service:</p>
+		<p>
+			<label for="very-poor">
+				<input type="radio" name="rate" value="Very poor" id="very-poor" /> Very
+				poor
+			</label>
+			<label for="poor">
+				<input type="radio" name="rate" value="Poor" id="poor" /> Poor
+			</label>
+			<label for="ok">
+				<input type="radio" name="rate" value="OK" id="ok" /> OK
+			</label>
+			<label for="good">
+				<input type="radio" name="rate" value="Good" /> Good
+			</label>
+			<label for="very-good">
+				<input type="radio" name="rate" value="Very Good" id="very-good" /> Very
+				Good
+			</label>
+		</p>
+		<p>
+			<button id="btnRate">Submit</button>
+		</p>
+		<p id="output"></p>
+		<script>
+			let btn = document.getElementById("btnRate");
+			let output = document.getElementById("output");
+
+			btn.addEventListener("click", () => {
+				let rates = document.getElementsByName("rate");
+				rates.forEach((rate) => {
+					if (rate.checked) {
+						output.innerText = `You selected: ${rate.value}`;
+					}
+				});
+			});
+		</script>
 	</body>
 </html>
